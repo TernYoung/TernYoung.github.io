@@ -5,15 +5,15 @@
 # Site
 title: Tern
 subtitle: 个人站
-description: Tern
-keywords: Tern
+description: 
+#keywords: Tern
 author: Tern
-language: 
-timezone: Shanghai
+language: zh-CN
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.cputern.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -90,4 +90,4 @@ deploy:
   repo: 
     coding: git@git.coding.net:CPUTern/CPUTern.git,master
     github: git@github.com:TernYoung/TernYoung.github.io.git,master
-  branch: master
+  #branch: master

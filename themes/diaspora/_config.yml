@@ -1,12 +1,12 @@
 # 头部菜单，title: link
 menu:
-  Whoami: /whoami
+  Whoami: /whoami/
   Github: https://github.com/TernYoung
   CSDN: https://blog.csdn.net/TernYoung
   知乎: https://www.zhihu.com/people/tern/activities
-  分类: /categories
-  归档: /archives
-  标签云: /tags
+  分类: /categories/
+  归档: /archives/
+  标签云: /tags/
 
 # 是否显示目录
 TOC: false
@@ -30,22 +30,25 @@ scrollbar: true
 
 # Gitalk 评论插件（https://github.com/gitalk/gitalk）
 gitalk:
+    enable: true
     # 是否自动展开评论框
     autoExpand: false
+    #ID
+    githubID: TernYoung
     # 应用编号
-    clientID: ''
+    clientID: 'f2e3994e079fbdf9cc8d'
     # 应用秘钥
-    clientSecret: ''
+    clientSecret: 'd0ca50a1dd9c21075525decfd7b48143478c7cab'
     # issue仓库名
-    repo: ''
+    repo: 'TernYoung.github.io'
     # Github名
-    owner: ''
+    owner: 'TernYoung'
     # Github名
-    admin: ['']
+    admin: ['TernYoung']
     # Ensure uniqueness and length less than 50
     id: location.pathname
     # Facebook-like distraction free mode
-    distractionFreeMode: false
+    distractionFreeMode: true
 
 # 网站关键字
 keywords: Tern

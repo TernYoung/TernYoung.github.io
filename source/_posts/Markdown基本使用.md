@@ -3,12 +3,12 @@ layout: post
 title: "Markdown基本使用"
 date: 2019-07-13 
 tags: "Markdown"
-cover: /static/images/markdown/cover.jpg
+cover: /static/images/markdown/markdown.png
 ---
 
 ---
 
-####目录
+### 目录
 
 * [Markdown是什么？](#1)
 * [标题](#2)
@@ -23,7 +23,7 @@ cover: /static/images/markdown/cover.jpg
 * [表格](#11)
 * [高级技巧](#12)
 
-####<a name="1"></a>Markdown是什么？
+### <a name="1"></a>Markdown是什么？
 
 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
 Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。
@@ -32,7 +32,7 @@ Markdown 编写的文档后缀为 .md, .markdown。
 
 ---
 
-####<a name="2"></a>标题
+### <a name="2"></a>标题
 
     # 一级标题
     ## 二级标题
@@ -52,13 +52,13 @@ Markdown 编写的文档后缀为 .md, .markdown。
 
 ---
 
-####<a name="3"></a>段落
+### <a name="3"></a>段落
 
     段落的换行是使用两个以上空格加上回车。或者使用一个空行。
 
 ---
 
-####<a name="4"></a>字体、删除线、下划线、脚注
+### <a name="4"></a>字体、删除线、下划线、脚注
 
     *斜体文本*
     _斜体文本_
@@ -88,7 +88,7 @@ ___粗斜体文本___
 
 ---
 
-####<a name="5"></a>分隔线
+### <a name="5"></a>分隔线
 
     ***
     * * *
@@ -107,7 +107,7 @@ ___粗斜体文本___
 
 ---
 
-####<a name="6"></a>列表
+### <a name="6"></a>列表
 
     * 第一项
     * 第二项
@@ -160,7 +160,7 @@ ___粗斜体文本___
 
 ---
 
-####<a name="7"></a>区块
+### <a name="7"></a>区块
 
     > 区块引用
     > Tern教程
@@ -208,7 +208,7 @@ ___粗斜体文本___
 
 ---
 
-####<a name="8"></a>代码
+### <a name="8"></a>代码
 
     //片段用''包裹
     'printf()'函数
@@ -237,7 +237,7 @@ $(document).ready(function () {
 
 ---
 
-####<a name="9"></a>链接
+### <a name="9"></a>链接
 
     [链接名称](链接地址)或者<链接地址>
 
@@ -264,7 +264,7 @@ $(document).ready(function () {
 
 ---
 
-####<a name="10"></a>图片
+### <a name="10"></a>图片
 
     ![alt 属性文本](图片地址)
     ![alt 属性文本](图片地址 "可选标题")
@@ -286,7 +286,7 @@ $(document).ready(function () {
 
 ---
 
-####<a name="11"></a>表格
+### <a name="11"></a>表格
 
     |  表头   | 表头  |
     |  ----  | ----  |
@@ -317,7 +317,7 @@ $(document).ready(function () {
 
 ---
 
-####<a name="12"></a>高级技巧
+### <a name="12"></a>高级技巧
 
     1.支持的 HTML 元素
     不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。
@@ -345,26 +345,6 @@ $(document).ready(function () {
     !   感叹号
 
 **文本加粗** 
-    \*\* 正常显示星号 \*\*
-
-    3.公式
-    当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：
-    $$
-    \mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
-    \mathbf{i} & \mathbf{j} & \mathbf{k} \\
-    \frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
-    \frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0 \\
-    \end{vmatrix}
-    $$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
-    $$
-
-$$
-\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
-\frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
-\frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0 \\
-\end{vmatrix}
-$$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
-$$
+\*\* 正常显示星号 \*\*
 
 ---

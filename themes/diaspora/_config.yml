@@ -1,6 +1,6 @@
 # 头部菜单，title: link
 menu:
-  Whoami: /whoami/
+  Me: /Me/
   Github: https://github.com/TernYoung
   CSDN: https://blog.csdn.net/TernYoung
   知乎: https://www.zhihu.com/people/tern/activities

@@ -15,9 +15,11 @@ tags:
 ## 网易云音乐突然不能打开，只能在终端打开。
 
 1. 输入命令：
+
 ```linux
 sudo gedit /etc/sudoers
 ```
+
 
 再最后面加一行：
 

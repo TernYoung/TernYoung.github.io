@@ -1,26 +1,44 @@
 ---
 title: 高等数学笔记
+author: Tern
+authorLink: cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 高等数学
+description: 高数的一些笔记
 date: 2019-07-24 21:59:36
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a7.png
 tags:
 	- 高等数学
 categories:
 	- 数学
-cover:  static/images/advanced_mathematics/cover.png
+mathjax: true
 ---
 
 #### 求极限
 
 几个重要极限（常用）：$\underset{x\rightarrow 0}{\lim}\frac{\sin x}{x}=1$ ，$\underset{x\rightarrow 0}{\lim}\frac{\tan x}{x}=1$  , $\underset{x\rightarrow 0}{\lim}\frac{\arcsin x}{x}=1$ , $\underset{x\rightarrow \infty}{\lim}\left( 1+\frac{1}{x} \right) ^x=e$ (强行凑成这样)
 
-常用等价无穷小： $x\rightarrow 0$ 时，$\sin x\Longleftrightarrow x,\tan x\Longleftrightarrow x,\arcsin x\Longleftrightarrow x,\arctan x\Longleftrightarrow x,\\ \ln \left( 1+x \right) \Longleftrightarrow x,e^x-1\Longleftrightarrow x,a^x-1\Longleftrightarrow x\ln a,\\1-\cos x\Longleftrightarrow \frac{1}{2}x^2,\left( 1+x \right) ^{\alpha}-1\Longleftrightarrow \alpha x$
+常用等价无穷小： $x\rightarrow 0$ 时，
+
+$\sin x\Longleftrightarrow x,\tan x\Longleftrightarrow x,\arcsin x\Longleftrightarrow x,\arctan x\Longleftrightarrow x $ 
+
+ $\ln \left( 1+x \right) \Longleftrightarrow x,e^x-1\Longleftrightarrow x,a^x-1\Longleftrightarrow x\ln a,$
+
+$1-\cos x\Longleftrightarrow \frac{1}{2}x^2,\left( 1+x \right) ^{\alpha}-1\Longleftrightarrow \alpha x$
 
 常用技巧：1.上下同除$x$ 2.换元 3.取倒数 4.分子有理化 5.洛必达法则
 
 #### 求导
 
 基本导数：
- $\left( a^x \right) '=a^x\ln a,\left( \log _ax \right) '=\frac{1}{x\ln a} \\
-\left( \arcsin x \right) '=\frac{1}{\sqrt{1-x^2}},\left( \arccos x \right) '=-\frac{1}{\sqrt{1-x^2}},\left( \arctan x \right) '=\frac{1}{1+x^2},\left( arccot x \right) '=-\frac{1}{1+x^2} \\ \left( \tan x \right) '=\sec ^2x,\left( \cot x \right) '=-\csc ^2x \\ \left( \sec x \right) '=\sec x\tan x,\left( \csc x \right) '=-\csc x\cot x$
+ $\left( a^x \right) '=a^x\ln a,\left( \log _ax \right) '=\frac{1}{x\ln a} $
+
+$\left( \arcsin x \right) '=\frac{1}{\sqrt{1-x^2}},\left( \arccos x \right) '=-\frac{1}{\sqrt{1-x^2}},\left( \arctan x \right) '=\frac{1}{1+x^2},\left( arccot x \right) '=-\frac{1}{1+x^2} $
+
+$ \left( \tan x \right) '=\sec ^2x,\left( \cot x \right) '=-\csc ^2x  \left( \sec x \right) '=\sec x\tan x,\left( \csc x \right) '=-\csc x\cot x$
 
 高阶导：1.因式除法，化真分式 2.裂项 3.降幂 4.取对数
 $\left( \sin x \right) ^n=\sin \left( x+n-\frac{\pi}{2} \right) $ 
@@ -79,7 +97,7 @@ $(ax+b)\rightarrow \frac{A}{ax+b}$ ,$px^2+qx+r\rightarrow\frac{Ax+B}{px^2+qx+r}$
 
 * $y^{,,}=f(x,y^,)$ (P323)  令y^,=p
 
-  例：$(1+x^2)y^{,,}=2xy^, ,  y|_{x=0}=1,y^,|_{x=0}=3$  (P323)
+  例：$ (1+x^2)y^{,,}=2xy^,,y|_{x=0}=1,y^, |_{x=0}=3$  (P323)
   
 * $y^{,,}=f(y,y^,)$ 令$y^,=p$ 则$y^{,,}=p\frac{dp}{dy}$   (P326)
 

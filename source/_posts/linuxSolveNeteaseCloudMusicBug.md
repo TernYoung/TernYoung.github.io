@@ -15,6 +15,7 @@ categories:
 tags: 
     - Linux
     - 网易云音乐
+mathjax: false
 ---
 
 

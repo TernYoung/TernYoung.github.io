@@ -6,7 +6,7 @@ favicon: /images/favicon.png
 cdn: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture
 avatar: /icon/favicon.png
 url: http://www.cputern.top
-description: Live your life with passion! With some drive!
+description: Shit Happens But Life Goes On！
 #cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
 pjax: 1
 # 1开启
@@ -87,7 +87,7 @@ donate:
 #paypal: https://www.paypal.me/hojuncn
   alipay: /contact/alipay.jpg
   wechat: /contact/wechatpay.jpg
-#wechatSQ: /img/custom/donate/WeChanSQ.jpg
+  wechatSQ: /contact/wechatpay.jpg
 
 #视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
 movies:

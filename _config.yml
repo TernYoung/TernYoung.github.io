@@ -6,16 +6,18 @@
 title: CPUTern
 subtitle: 脑阔子疼
 description: 脑阔子疼的个人站
-#keywords: Tern
+keywords: Tern
 author: CPUTern
-language: zh-CN
-timezone:
+language: 
+	- zh-cn
+	- en
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.cputern.top
 root: /
-permalink: :title/
+permalink: :year/:month/:title/
 permalink_defaults:
 
 # Directory
@@ -81,8 +83,14 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
 ## Themes: https://hexo.io/themes/
-theme: diaspora
+theme: Sakura
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -92,3 +100,12 @@ deploy:
     coding: git@git.coding.net:CPUTern/CPUTern.git,master
     github: git@github.com:TernYoung/TernYoung.github.io.git,master
   #branch: master
+
+# backup
+backup:
+  type: git
+  message: backup my blog of https://TernYoung.github.io/
+  repository:
+    github: git@github.com:TernYoung/TernYoung.github.io.git,backup
+    coding: git@git.coding.net:CPUTern/CPUTern.git,backup
+

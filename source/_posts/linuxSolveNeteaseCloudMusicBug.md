@@ -1,16 +1,23 @@
 ---
 title: Linux 网易云音乐的一些Bug
+author: Tern
+authorLink: cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 date: 2019-11-21 20:38:45
+comments: true
+keywords: 网易云音乐
+description: 修复Linux 网易云音乐的一些Bug
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a3.png
 categories: 
-    - Linux
+	- 技术
 tags: 
     - Linux
     - 网易云音乐
 ---
 
 
-
-# Linux 网易云音乐的一些Bug
 
 ## 网易云音乐突然不能打开，只能在终端打开。
 

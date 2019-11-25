@@ -75,14 +75,14 @@ timezone:
 ```
 
 部署
-```yml
+
 deploy:
   type: git
   repo: 
     github: 你的github仓库地址
     # coding: 你的coding仓库地址
   branch: master
-```
+
 
 备份 （使用hexo b发布备份到远程仓库）
 ```yml

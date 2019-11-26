@@ -1,9 +1,9 @@
 ---
 title: music
-date: 2018-12-20 23:14:28
+date: 2019-11-26 23:14:28
 keywords: 喜欢的音乐
 description: 
-comments: false
+comments: true
 photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/music.jpg
 ---
 {% raw %}
@@ -17,7 +17,7 @@ photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/music.jpg
 <meting-js
   server="netease"
   type="playlist"
-  id="419239189"
+  id="2690960268"
   mutex="true">
 </meting-js>
 {% endraw %}

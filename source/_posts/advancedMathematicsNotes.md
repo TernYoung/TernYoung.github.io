@@ -14,7 +14,7 @@ tags:
 	- 高等数学
 categories:
 	- 数学
-mathjax: true
+
 ---
 
 #### 求极限

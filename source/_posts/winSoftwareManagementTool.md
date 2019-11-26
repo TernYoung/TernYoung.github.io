@@ -4,10 +4,16 @@ date: 2019-10-10 18:43:00
 tags:
 	- 包管理工具
 	- windows
-	- chocolatey
-categories:
-	- 工具
-cover: static/images/chocolatey/cover.png
+categories: 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: Chocolatey
+description: Win下包管理工具
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a9.png
 ---
 
 ### win10下安装Chocolatey

@@ -5,14 +5,21 @@ mathjax: true
 tags: 
 	- 快速幂
 	- 矩阵快速幂
-	- 算法
 categories:
-	- 算法
-cover: static/images/jzksm/cover.png
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 矩阵快速幂
+description: 快速幂和矩阵快速幂
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b9.png
 ---
 
 
-<u>！！！有个bug，数学公式刷新页面后才显示！！！</u>
+
 
 ## 矩阵快速幂
 

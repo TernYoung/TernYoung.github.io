@@ -1,13 +1,21 @@
 ---
 title: Hexo搭建个人博客
 date: 2019-11-20 18:38:45
-categories: 
-    - hexo
-    - 博客
+categories: 技术
 tags: 
-    - hexo
-    - github
+    - Hexo
+    - Pages服务
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: hexo
+description: Hexo搭建博客
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/a1.jpg
 ---
+
 
 
 # Hexo 搭建博客

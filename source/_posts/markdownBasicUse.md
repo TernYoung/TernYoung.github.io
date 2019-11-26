@@ -1,9 +1,19 @@
 ---
-layout: post
-title: "Markdown基本使用"
-date: 2019-07-13 
-tags: "Markdown"
-cover: /static/images/markdown/markdown.png
+title: Markdown基本使用
+date: 2019-07-13 00:17:11
+tags: 
+	- markdown
+categories:
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: markdown
+description: Markdown基本使用
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b7.png
 ---
 
 ---
@@ -66,10 +76,10 @@ Markdown 编写的文档后缀为 .md, .markdown。
     __粗体文本__
     ***粗斜体文本***
     ___粗斜体文本___
-
+    
     ~~删除线~~
     <u>下划线<u/>
-
+    
     [^要注明的文本]
 
 显示效果如下：
@@ -112,19 +122,19 @@ ___粗斜体文本___
     * 第一项
     * 第二项
     * 第三项
-
+    
     + 第一项
     + 第二项
     + 第三项
-
+    
     - 第一项
     - 第二项
     - 第三项
-
+    
     1. 第一项
     2. 第二项
     3. 第三项
-
+    
     //列表嵌套，四个空格
     1. 第一项：
         - 第一项嵌套的第一个元素
@@ -165,11 +175,11 @@ ___粗斜体文本___
     > 区块引用
     > Tern教程
     > 学的不仅是技术更是梦想
-
+    
     > 最外层
     > > 第一层嵌套
     > > > 第二层嵌套
-
+    
     //区块中使用列表
     > 区块中使用列表
     > 1. 第一项
@@ -177,7 +187,7 @@ ___粗斜体文本___
     > + 第一项
     > + 第二项
     > + 第三项
-
+    
     //列表中使用区块
     * 第一项
         > 菜鸟教程
@@ -192,6 +202,7 @@ ___粗斜体文本___
 
 > 最外层
 > > 第一层嵌套
+> >
 > > > 第二层嵌套
 
 > 区块中使用列表
@@ -212,11 +223,11 @@ ___粗斜体文本___
 
     //片段用''包裹
     'printf()'函数
-
+    
     代码区块使用 4 个空格或者一个制表符（Tab 键）。
-
+    
     你也可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：
-
+    
     ```javascript
     $(document).ready(function () {
         alert('RUNOOB');
@@ -240,13 +251,13 @@ $(document).ready(function () {
 ### <a name="9"></a>链接
 
     [链接名称](链接地址)或者<链接地址>
-
+    
     //高级链接
     链接也可以用变量来代替，文档末尾附带变量地址：
     这个链接用 1 作为网址变量 [Google][1]
     这个链接用 runoob 作为网址变量 [Runoob][runoob]
     然后在文档的结尾为变量赋值（网址）
-
+    
     [1]: http://www.google.com/
     [runoob]: http://www.runoob.com/
 
@@ -269,15 +280,16 @@ $(document).ready(function () {
     ![alt 属性文本](图片地址)
     ![alt 属性文本](图片地址 "可选标题")
 
-    
+
+​    
     开头一个感叹号 !
     接着一个方括号，里面放上图片的替代文字
     接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 'title' 属性的文字。
-
+    
     当然，你也可以像网址那样对图片网址使用变量:
     这个链接用 1 作为网址变量 [Tern][1].
     然后在文档的结尾位变量赋值（网址）
-
+    
     [1]: ../images/posts/markdown/favicon.png
 
 显示结果如下：
@@ -292,12 +304,12 @@ $(document).ready(function () {
     |  ----  | ----  |
     | 单元格  | 单元格 |
     | 单元格  | 单元格 |
-
+    
     //对齐方式
     -: 设置内容和标题栏居右对齐。
     :- 设置内容和标题栏居左对齐。
     :-: 设置内容和标题栏居中对齐。
-
+    
     | 左对齐 | 右对齐 | 居中对齐 |
     | :-----| ----: | :----: |
     | 单元格 | 单元格 | 单元格 |

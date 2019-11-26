@@ -4,10 +4,16 @@ date: 2019-8-24 23:45:00
 tags:
 	- 数论
 categories:
-	- 数论
-cover: static/images/number_theory/cover.png
-mp3:
-	- https://link.hhtjim.com/163/150361.mp3
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 数论
+description: 数论笔记
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a5.jpg
 ---
 
 
@@ -387,21 +393,29 @@ $$
 >    {
 >    tot = 0; mu[1]=1;
 >    for(int i=2; i<n; i++) {
->      if( !vis[i] ) { pri[++tot]=i; mu[i]=-1; }
->      for(int j=1; j<=tot && i*pri[j]<n; j++) {
->              vis[ i*pri[j] ] = 1;
->              if( i%pri[j]==0 ) {
->                  mu[ i*pri[j] ] = 0;
->                  break;
->              }
->              mu[ i*pri[j] ] = -mu[i];
->      } 
+>    if( !vis[i] ) { pri[++tot]=i; mu[i]=-1; }
+>    for(int j=1; j<=tot && i*pri[j]<n; j++) {
+>        vis[ i*pri[j] ] = 1;
+>        if( i%pri[j]==0 ) {
+>            mu[ i*pri[j] ] = 0;
+>            break;
+>        }
+>        mu[ i*pri[j] ] = -mu[i];
+>    } 
 >    } 
 >    }
 >    ```
 >  ```
 > 
 >  ```
+>
+> ```
+> 
+> ```
+>
+> ```
+> 
+> ```
 >
 > ```
 > 

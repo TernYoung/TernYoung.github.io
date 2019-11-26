@@ -1,12 +1,20 @@
 ---
 title: 递归与递推
 date: 2019-11-19 13:27:23
-mathjax: true
 tags: 
 	- 递归
+	- 递推
 categories:
-	- 递归
-cover: static/images/recursion/cover.jpg 
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 递归
+description: 递归的讲解
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a8.jpg
 ---
 
 # 递归与递推

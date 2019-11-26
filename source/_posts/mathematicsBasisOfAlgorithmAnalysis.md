@@ -4,8 +4,16 @@ date: 2019-08-11 11:54:36
 tags:
 	- 算法
 categories:
-	- 算法
-cover:  static/images/algorithm/cover.jpg
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 算法
+description: 算法分析的数学基础
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a6.png
 ---
 
 

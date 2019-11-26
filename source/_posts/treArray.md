@@ -5,15 +5,17 @@ tags:
 	- 数据结构
 	- 树状数组
 categories:
-	- 数据结构
-cover:  static/images/BIT/树状数组.jpg
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 树状数组
+description: 数据结构之树状数组
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a4.jpg
 ---
-
-
-
-
-
-公式看不了请刷新一下！！！
 
 
 

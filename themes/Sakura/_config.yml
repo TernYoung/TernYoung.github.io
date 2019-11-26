@@ -11,12 +11,9 @@ description: Shit Happens But Life Goes On！
 pjax: 1
 # 1开启
 # MathJax Support
-mathjax:
-  enable: true
-  per_page: true
+mathjax: true
 
-
-notice: 功能全面升级...
+notice: 全面升级...
 lazyloadImg: /icon/loader/orange.progress-bar-stripe-loader.svg
 
 menus:
@@ -55,6 +52,13 @@ bg:
   - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a1.png
   - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a2.png
   - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a3.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a4.jpg
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a5.jpg
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a6.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a7.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a8.jpg
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a9.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b9.png
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
 bgclass: filter-dot

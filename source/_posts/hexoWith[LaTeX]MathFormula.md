@@ -1,13 +1,22 @@
-﻿---
-title: 如和在hexo中使用LaTeX数学公式
+---
+title: 如何在hexo中使用LaTeX数学公式
 date: 2019-07-16 18:55:34
 tags:
     - hexo
     - LaTeX
 categories:
-    - 博客
-cover: static/images/hexo/cover.jpg
+    - 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: hexoLaTeX
+description: hexo中使用LaTeX数学公式
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b5.png
 ---
+
 
 ### hexo的数学公式问题
 

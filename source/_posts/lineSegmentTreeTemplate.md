@@ -1,11 +1,20 @@
 ---
-title: 线段树
+title: 线段树模板
 date: 2019-07-18 22:26:23
 tags: 
 	- 线段树
 categories:
-	- 数据结构
-cover: static/images/line_segment_tree/cover.jpeg
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 线段树
+description: 线段树模板
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b3.png
+
 ---
 
 #### 建树

@@ -1,7 +1,7 @@
 ---
 title: Linux 网易云音乐的一些Bug
 author: Tern
-authorLink: cputern.top
+authorLink: www.cputern.top
 authorAbout: 一个好奇的人
 authorDesc: 一个好奇的人
 avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
@@ -15,7 +15,6 @@ categories:
 tags: 
     - Linux
     - 网易云音乐
-mathjax: false
 ---
 
 

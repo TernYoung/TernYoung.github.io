@@ -1,14 +1,22 @@
-﻿---
+---
 title: 素数筛法
 date: 2019-07-24 21:06:36
 tags:
 	- 素数
 	- 数论
 categories:
-	- 算法
-	- 数论算法
-cover:  static/images/number_theory/prime_sieve.png
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 素数筛法
+description: 素数筛法
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b2.png
 ---
+
 
 ### 朴素筛法（试除法）
 

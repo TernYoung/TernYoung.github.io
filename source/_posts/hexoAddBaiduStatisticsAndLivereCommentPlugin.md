@@ -6,9 +6,16 @@ tags:
     - 百度统计
     - Livere
 categories:
-    - 博客配置
-cover: static/images/hexolivere/cover.png
-mp3: http://link.hhtjim.com/163/5146554.mp3
+    - 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: hexo
+description: hexo添加百度统计和Livere(来必应)评论插件
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b4.png
 ---
 
 ## `Hexo` 添加 `百度统计`

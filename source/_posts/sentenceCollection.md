@@ -4,10 +4,16 @@ date: 2019-10-24 23:45:00
 tags:
 	- 句子
 categories:
-	- 句子
-cover: static/images/sentence/cover.png
-mp3:
-	- https://link.hhtjim.com/163/150361.mp3
+	- 生活
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: 句子
+description: 富含哲理
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b6.jpg
 ---
 
 

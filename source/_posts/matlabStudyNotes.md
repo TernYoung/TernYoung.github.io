@@ -4,8 +4,16 @@ date: 2019-07-29 20:54:36
 tags:
 	- Matlab
 categories:
-	- Matlab
-cover:  static/images/matlab/matlab.png
+	- 技术
+author: Tern
+authorLink: www.cputern.top
+authorAbout: 一个好奇的人
+authorDesc: 一个好奇的人
+avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
+comments: true
+keywords: matlab
+description: Matlab基础
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b1.png
 ---
 
 

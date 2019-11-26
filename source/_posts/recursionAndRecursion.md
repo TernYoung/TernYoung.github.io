@@ -14,7 +14,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 递归
 description: 递归的讲解
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a8.jpg
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic015.jpg
 ---
 
 # 递归与递推

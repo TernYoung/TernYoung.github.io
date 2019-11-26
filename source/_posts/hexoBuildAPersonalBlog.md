@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: hexo
 description: Hexo搭建博客
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/a1.jpg
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic006.jpg
 ---
 
 

@@ -9,7 +9,7 @@ comments: true
 keywords: 高等数学
 description: 高数的一些笔记
 date: 2019-07-24 21:59:36
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a7.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic003.jpg
 tags:
 	- 高等数学
 categories:

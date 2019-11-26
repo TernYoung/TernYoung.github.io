@@ -14,7 +14,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 树状数组
 description: 数据结构之树状数组
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a4.jpg
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic017.jpg
 ---
 
 

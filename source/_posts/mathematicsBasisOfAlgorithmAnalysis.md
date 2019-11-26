@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 算法
 description: 算法分析的数学基础
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a6.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic011.jpg
 ---
 
 

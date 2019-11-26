@@ -15,7 +15,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 矩阵快速幂
 description: 快速幂和矩阵快速幂
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b9.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic004.jpg
 ---
 
 

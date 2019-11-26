@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: markdown
 description: Markdown基本使用
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b7.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic010.jpg
 ---
 
 ---
@@ -282,10 +282,10 @@ $(document).ready(function () {
 
 
 ​    
-    开头一个感叹号 !
-    接着一个方括号，里面放上图片的替代文字
-    接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 'title' 属性的文字。
-    
+​    开头一个感叹号 !
+​    接着一个方括号，里面放上图片的替代文字
+​    接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 'title' 属性的文字。
+​    
     当然，你也可以像网址那样对图片网址使用变量:
     这个链接用 1 作为网址变量 [Tern][1].
     然后在文档的结尾位变量赋值（网址）

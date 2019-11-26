@@ -14,7 +14,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: hexoLaTeX
 description: hexo中使用LaTeX数学公式
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b5.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic007.jpg
 ---
 
 

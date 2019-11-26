@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: matlab
 description: Matlab基础
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b1.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic012.jpg
 ---
 
 

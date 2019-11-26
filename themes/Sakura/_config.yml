@@ -49,24 +49,26 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a1.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a2.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a3.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a4.jpg
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a5.jpg
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a6.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a7.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a8.jpg
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a9.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b9.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic001.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic002.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic003.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic004.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic005.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic015.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic007.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic008.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic009.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic010.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic015.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic022.png
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
 bgclass: filter-dot
 
 # startdash url, title, desc img
 startdash: 
-  - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /Wallpapers/bilibili.png}
-  - {url: /, title: Tern的万事屋, desc: 技术服务, img: /Wallpapers/bilibili.png}
+  - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /smallPic/pic001.jpg}
+  - {url: /, title: Tern的万事屋, desc: 技术服务, img: /smallPic/pic001.jpg}
 
 
 # your site build time or founded date

@@ -14,7 +14,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 素数筛法
 description: 素数筛法
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b2.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic014.jpg
 ---
 
 

@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 线段树
 description: 线段树模板
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b3.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic008.jpg
 
 ---
 

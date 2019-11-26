@@ -9,7 +9,7 @@ date: 2019-11-21 20:38:45
 comments: true
 keywords: 网易云音乐
 description: 修复Linux 网易云音乐的一些Bug
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a3.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic009.jpg
 categories: 
 	- 技术
 tags: 

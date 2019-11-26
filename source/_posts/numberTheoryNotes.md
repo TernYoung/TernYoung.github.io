@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 数论
 description: 数论笔记
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a5.jpg
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic013.jpg
 ---
 
 
@@ -389,25 +389,29 @@ $$
 >   * 因此，可以用线性筛对莫比乌斯函数打表
 >
 >   * ```c++
->    void mus(int n)
->    {
->    tot = 0; mu[1]=1;
->    for(int i=2; i<n; i++) {
->    if( !vis[i] ) { pri[++tot]=i; mu[i]=-1; }
->    for(int j=1; j<=tot && i*pri[j]<n; j++) {
->        vis[ i*pri[j] ] = 1;
->        if( i%pri[j]==0 ) {
->            mu[ i*pri[j] ] = 0;
->            break;
->        }
->        mu[ i*pri[j] ] = -mu[i];
->    } 
->    } 
->    }
->    ```
->  ```
+>     void mus(int n)
+>     {
+>     tot = 0; mu[1]=1;
+>     for(int i=2; i<n; i++) {
+>     if( !vis[i] ) { pri[++tot]=i; mu[i]=-1; }
+>     for(int j=1; j<=tot && i*pri[j]<n; j++) {
+>     vis[ i*pri[j] ] = 1;
+>     if( i%pri[j]==0 ) {
+>         mu[ i*pri[j] ] = 0;
+>         break;
+>     }
+>     mu[ i*pri[j] ] = -mu[i];
+>     } 
+>     } 
+>     }
+>     ```
+> ```
 > 
->  ```
+> ```
+>
+> ```
+> 
+> ```
 >
 > ```
 > 

@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: Chocolatey
 description: Win下包管理工具
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/a9.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic018.jpg
 ---
 
 ### win10下安装Chocolatey

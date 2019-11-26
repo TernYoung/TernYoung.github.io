@@ -13,7 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 句子
 description: 富含哲理
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b6.jpg
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic016.jpg
 ---
 
 

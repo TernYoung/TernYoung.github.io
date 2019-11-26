@@ -15,7 +15,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: hexo
 description: hexo添加百度统计和Livere(来必应)评论插件
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/Wallpapers/b4.png
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic099.jpg
 ---
 
 ## `Hexo` 添加 `百度统计`

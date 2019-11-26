@@ -223,6 +223,9 @@ v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 ```
 
+[aplayer官方文档](https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md)
+
+
 ## 分类页和标签页配置
 
 ### 分类页

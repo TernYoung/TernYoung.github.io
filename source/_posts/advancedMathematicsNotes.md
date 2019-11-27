@@ -1,5 +1,10 @@
 ---
 title: 高等数学笔记
+date: 2019-07-24 21:59:36
+tags:
+	- 高等数学
+categories:
+	- 数学
 author: Tern
 authorLink: cputern.top
 authorAbout: 一个好奇的人
@@ -8,13 +13,7 @@ avatar: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png
 comments: true
 keywords: 高等数学
 description: 高数的一些笔记
-date: 2019-07-24 21:59:36
 photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic003.jpg
-tags:
-	- 高等数学
-categories:
-	- 数学
-
 ---
 
 #### 求极限

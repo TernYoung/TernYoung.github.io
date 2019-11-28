@@ -210,8 +210,8 @@ $$
 \left[ \begin{array}{c}
 	f\left( 4 \right) \,\,f\left( 3 \right) \,\,f\left( 2 \right) \,\,f\left( 1 \right)\\
 	\text{0 0 0 }0\\
-	\text{1 0 0 }0\\
-	-\text{1 0 0 }0\\
+	\text{0 0 0 }0\\
+	\text{0 0 0 }0\\
 \end{array} \right]
 $$
 第三步：求第x项

@@ -67,8 +67,8 @@ bgclass: filter-dot
 
 # startdash url, title, desc img
 startdash: 
-  - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /smallPic/pic001.jpg}
-  - {url: /, title: Tern的万事屋, desc: 技术服务, img: /smallPic/pic001.jpg}
+  - {url: /Me/, title: 自我介绍, desc: WhoAmI, img: /smallPic/pic002.jpg}
+  - {url: /technologyStack/, title: Tern的技术栈, desc: Geek, img: /smallPic/pic004.jpg}
 
 
 # your site build time or founded date

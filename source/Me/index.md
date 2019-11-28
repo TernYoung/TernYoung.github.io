@@ -1,11 +1,17 @@
 ---
-title: Me
-date: 2019-07-16 08:32:40
+title: Whoami
+comments: false
+date: 2019-08-04 22:53:25
+keywords: me
+description: about me
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic002.jpg
 ---
 
-#### 关于我
 
-你好，我是脑瓜子疼，专注 科技、科学、技术，关注新技术，喜欢编程，拆解，动漫，科幻，哲学，心理学，跑步，电子游戏等一系列有意思的东西。
+
+## 关于我
+
+你好，我是CPUTern，专注 科技、科学、技术，关注新技术，喜欢编程，拆解，动漫，科幻，哲学，心理学，跑步，电子游戏等一系列有意思的东西。
 
 本人的几个属性：
 
@@ -17,7 +23,7 @@ date: 2019-07-16 08:32:40
 
 
 
-#### 关于小站
+## 关于小站
 
 2019.7.16搞好本站，不知道能写多久，坚持哈哈哈。
 
@@ -27,6 +33,6 @@ date: 2019-07-16 08:32:40
 
 联系方式：cputern@foxmail.com
 
-<p></p>
+
 <!--   <img src="/static/images/personal/Weixin.jpg" alt="扫一扫，十年少" width="200" height="200">    -->
 

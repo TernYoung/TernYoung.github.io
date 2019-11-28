@@ -3,7 +3,7 @@ prefixName: CPU
 siteName: Tern
 # favicon and site master avatar
 favicon: /images/favicon.png
-cdn: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture
+cdn: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1
 avatar: /icon/favicon.png
 url: www.cputern.top
 description: Shit Happens But Life Goes On
@@ -36,7 +36,7 @@ menus:
   赞赏: { path: /donate/, fa: fa-heart faa-pulse }
   关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
     我？: {path: /about/, fa: fa-meetup}, 
-    主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
+# 主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
     Lab: {path: /lab/, fa: fa-cogs },
   } }
 #客户端: { path: /client/, fa: fa-android faa-vertical }
@@ -49,18 +49,18 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic001.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic002.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic003.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic028.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic005.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic015.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic007.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic008.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic035.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic010.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic015.png
-  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/largePic/png/pic022.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic001.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic002.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic003.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic028.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic005.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic007.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic008.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic035.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic010.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png
+  - https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic022.png
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
 bgclass: filter-dot

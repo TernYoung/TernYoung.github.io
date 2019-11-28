@@ -4,7 +4,7 @@ comments: false
 date: 2019-08-04 22:53:25
 keywords: me
 description: about me
-photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic002.jpg
+photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/smallPic/pic002.jpg
 ---
 
 

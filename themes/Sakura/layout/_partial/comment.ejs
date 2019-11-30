@@ -5,6 +5,8 @@
       var valine = new Valine();
       valine.init({
         el: '#vcomments',
+        notify: true, // 邮件提醒!!!
+        verify: true, // 验证码
         appId: "<%= theme.v_appId %>",
         appKey: "<%= theme.v_appKey %>",
         path: window.location.pathname,

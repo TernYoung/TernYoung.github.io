@@ -117,7 +117,7 @@ div 部分用于显示来自服务器的信息。当按钮被点击时，它负�
 <button type="button" onclick="loadXMLDoc()">修改内容</button>
 ```
 
-接下来，在页面的 head 部分添加一个  <script> 标签。该标签中包含了这个 loadXMLDoc() 函数： 
+接下来，在页面的 head 部分添加一个  `<script>` 标签。该标签中包含了这个 loadXMLDoc() 函数： 
 
 ```html
 <head>

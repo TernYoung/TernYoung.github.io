@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Hexo搭建个人博客 | CPUTern</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "CPUTern";
+  mashiro_option.author_name = "Tern";
+  mashiro_option.site_url = "www.cputern.top";
+  mashiro_option.v_appId = "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz";
+  mashiro_option.v_appKey = "pwG2i33AWjwOOQnEPqLwuW62";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic001.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic002.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic003.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic028.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic005.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic007.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic008.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic035.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic010.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic022.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8ed631e35fec02d0275a0fec8cd93734";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="www.cputern.top">
+          <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Shit Happens But Life Goes On</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/TernYoung" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/weChat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">CPU</span>
+            <span class="shironeko">Tern</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic006.jpg);" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic006.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Hexo搭建个人博客</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.cputern.top">
+            <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png">
+          </a>
+        </span>
+        <span>
+          <a href="www.cputern.top">Tern</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-11-20<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="Hexo-搭建博客"><a href="#Hexo-搭建博客" class="headerlink" title="Hexo 搭建博客"></a>Hexo 搭建博客</h1><blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。</p>
+<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener"> Hexo官网</a> 因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
+</blockquote>
+<h2 id="第一部分：Hexo搭建步骤"><a href="#第一部分：Hexo搭建步骤" class="headerlink" title="第一部分：Hexo搭建步骤"></a>第一部分：Hexo搭建步骤</h2><h3 id="Hexo的初级搭建还有部署到github-page上，以及个人域名的绑定。"><a href="#Hexo的初级搭建还有部署到github-page上，以及个人域名的绑定。" class="headerlink" title="Hexo的初级搭建还有部署到github page上，以及个人域名的绑定。"></a>Hexo的初级搭建还有部署到github page上，以及个人域名的绑定。</h3><h4 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="　1. 安装Git"></a>　1. 安装Git</h4><p>Windows: <a href="https://gitforwindows.org/" target="_blank" rel="noopener">Download git</a> ,下载后有个Git Bash命令行工具，用这个工具来使用git</p>
+<p>Linux: 输入命令<code>sudo apt-get install git</code>，安装好后，用<code>git --version</code> 查看版本</p>
+<h4 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="　2. 安装Node.js"></a>　2. 安装Node.js</h4><p>Windows：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Download Node.js</a> 选择LTS版本</p>
+<p>Linux：输入以下命令安装</p>
+<pre><code class="lang-linux">sudo apt-get install nodejs
+sudo apt-get install npm
+</code></pre>
+<p>安装完毕后，打开命令行,输入以下命令，检查安装是否成功</p>
+<pre><code class="lang-linux">node -v
+npm -v
+</code></pre>
+<blockquote>
+<p>Tips：Windows 安装 git 后可以用 git bash 敲命令行</p>
+</blockquote>
+<h4 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="　3. 安装Hexo"></a>　3. 安装Hexo</h4><p>先创建一个文件夹Blog，然后cd到这个文件夹下</p>
+<p>输入命令：</p>
+<pre><code class="lang-linux">npm install -g hexo-cli
+</code></pre>
+<p>用 <code>hexo - v</code> 查看下版本</p>
+<p>安装完毕</p>
+<p>初始化 hexo , myblog 为你想取的名</p>
+<pre><code class="lang-linux">hexo init myblog
+cd myblog
+npm install
+</code></pre>
+<p>建完成后，指定文件夹目录下有：</p>
+<ul>
+<li>node_modules: 依赖包</li>
+<li>public：存放生成的页面</li>
+<li>scaffolds：生成文章的一些模板</li>
+<li>source：用来存放你的文章</li>
+<li>themes：主题</li>
+<li>_config.yml: 博客的配置文件</li>
+</ul>
+<p>部署hexo服务，在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
+<pre><code class="lang-linux">hexo g
+hexo server
+</code></pre>
+<p>使用Ctrl + C 关闭服务</p>
+<h4 id="4-Github创建个人仓库"><a href="#4-Github创建个人仓库" class="headerlink" title="　4. Github创建个人仓库"></a>　4. Github创建个人仓库</h4><p>登录 Github 账户，没有的注册一个。</p>
+<p>登录后，点击New repository，新建仓库</p>
+<blockquote>
+<p>创建一个和你用户名相同的仓库，<a href="http://xn--yfr16an19l.github.io" target="_blank" rel="noopener">后面加.github.io</a>，只有这样，将来要部署到GitHub page的时候，才会被识别，<a href="http://xn--xxxx-4m5f354ev5p.github.io" target="_blank" rel="noopener">也就是xxxx.github.io</a>，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。</p>
+</blockquote>
+<p>点击 Create repository。</p>
+<h4 id="5-生成SSH添加到Github"><a href="#5-生成SSH添加到Github" class="headerlink" title="　5. 生成SSH添加到Github"></a>　5. 生成SSH添加到Github</h4><p>回到git bash中，输入：</p>
+<pre><code class="lang-git">git config --global user.name &quot;yourname&quot;
+git config --global user.email &quot;youremail&quot;
+</code></pre>
+<p>yourname是你的GitHub用户名，youremail是你GitHub的邮箱。</p>
+<p>可以输入以下命令检查输入是否正确：</p>
+<pre><code class="lang-git">git config --list
+</code></pre>
+<p>然后创建SSH，一路回车</p>
+<pre><code class="lang-git">ssh-keygen -t rsa -C &quot;youremail&quot;
+</code></pre>
+<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
+<blockquote>
+<p>SSH是一个秘钥，id_rsa是这台电脑的私人秘钥，id_ras.pub是公开秘钥。把公钥放在Github上，当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+</blockquote>
+<p>在GitHub的setting中，找到SSH keys设置选项，点击<code>New SSH key</code> 把<code>id_rsa.pub</code>里的信息复制过去。</p>
+<p>最后在gitbash中查看是否成功</p>
+<pre><code class="lang-git">ssh -T git@github.com
+</code></pre>
+<h4 id="6-将hexo部署到GitHub"><a href="#6-将hexo部署到GitHub" class="headerlink" title="　6. 将hexo部署到GitHub"></a>　6. 将hexo部署到GitHub</h4><p>hexo与GitHub关联，将hexo生成的文章部署到GitHub上，打开站点配置文件<code>_config.yml</code>,翻到最后，修改为YourGitHubName，也就是你的GitHub账户</p>
+<pre><code class="lang-json">deploy:
+  type: git
+  repo: https://github.com/YourgithubName/YourgithubName.github.io.git
+  branch: master
+</code></pre>
+<p>这个时候需要先安装deploy-git，这样才能用命令部署到GitHub。</p>
+<pre><code class="lang-linux">npm install hexo-deployer-git --save
+</code></pre>
+<p>然后</p>
+<pre><code class="lang-linux">hexo clean
+hexo generate
+hexo deploy
+</code></pre>
+<p><code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
+<blockquote>
+<p>Tips: deploy时可能要你输入username和password。</p>
+</blockquote>
+<p>部署成功的话，可以在<code>http://yourname.github.io</code> 看到你的博客</p>
+<h4 id="7-设置个人域名"><a href="#7-设置个人域名" class="headerlink" title="　7. 设置个人域名"></a>　7. 设置个人域名</h4><p>现在个人网站的地址是 <code>yourname.github.io</code> ,如果觉得这个网址的逼格不够，那就要购买设置自己的个人域名。这里介绍在 <a href="https://wanwang.aliyun.com/?spm=5176.8142029.digitalization.2.e9396d3e46JCc5" target="_blank" rel="noopener">阿里云</a> 上购买域名，各个后缀的价格不一样，.com比较贵，其它的有的很便宜。</p>
+<p>你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。点<strong>解析</strong>进去，添加解析。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>解析线路（isp）</th>
+<th>记录值</th>
+<th>TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>www</td>
+<td>CNAME</td>
+<td>默认</td>
+<td>yourname.github.io</td>
+<td>10分钟</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名</p>
+<p>然后在博客文件source种创建一个名为CNAME文件，不要后缀，写上你的域名。</p>
+<p>最后在gitbash中输入</p>
+<pre><code class="lang-git">hexo clean
+hexo g
+hexo d
+</code></pre>
+<p>打开浏览器，输入你自己的域名，就可以看见你的博客了。</p>
+<h4 id="8-发布文章"><a href="#8-发布文章" class="headerlink" title="8. 发布文章"></a>8. 发布文章</h4><p>这样你就可以开始写文章了</p>
+<pre><code class="lang-linux">hexo new newpapername
+</code></pre>
+<blockquote>
+<p>Tips: 可以直接在source/_post 中创建.md文件，然后直接编辑也可。</p>
+</blockquote>
+<p>然后再source/_post 中打开.md文件，就可以开始编辑了。当写完三连</p>
+<pre><code class="lang-linux">hexo clean
+hexo g
+hexo d
+</code></pre>
+<p>即可在网站上看到更新。</p>
+<h2 id="第二部分：-Hexo配置"><a href="#第二部分：-Hexo配置" class="headerlink" title="第二部分： Hexo配置"></a>第二部分： Hexo配置</h2><h3 id="Hexo的基本配置，更换主题，实现多终端工作，以及再coding-page部署实现国内外分流。"><a href="#Hexo的基本配置，更换主题，实现多终端工作，以及再coding-page部署实现国内外分流。" class="headerlink" title="Hexo的基本配置，更换主题，实现多终端工作，以及再coding page部署实现国内外分流。"></a>Hexo的基本配置，更换主题，实现多终端工作，以及再coding page部署实现国内外分流。</h3><h4 id="1-Hexo基本配置"><a href="#1-Hexo基本配置" class="headerlink" title="1. Hexo基本配置"></a>1. Hexo基本配置</h4><p>博客文件根目录下的 <code>_config.yml</code> ,是整个Hexo框架的配置文件。里面有大部分配置。详细可参考 <a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">官方配置文档</a></p>
+<pre><code class="lang-yml">theme: landscape
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: &lt;repository url&gt;
+  branch: [branch]
+</code></pre>
+<p><code>theme</code>就是选择什么主题，也就是在<code>theme</code>这个文件夹下，在官网上有很多个主题，默认给你安装的是<code>lanscape</code>这个主题。当你需要更换主题时，在官网上下载，把主题的文件放在<code>theme</code>文件夹下，再修改这个参数就可以了。</p>
+<p>接下来这个<code>deploy</code>就是网站的部署的，<code>repo</code>就是仓库(Repository)的简写。<code>branch</code>选择仓库的哪个分支。这个在之前进行github page部署的时候已经修改过了，不再赘述。而这个在后面进行双平台部署的时候会再次用到。</p>
+<h5 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h5><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<pre><code>title: Hello World
+date: 2013/7/13 20:46:25
+---
+</code></pre><p>下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>layout</code></td>
+<td style="text-align:center">布局</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>title</code></td>
+<td style="text-align:center">标题</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>date</code></td>
+<td style="text-align:center">建立日期</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>updated</code></td>
+<td style="text-align:center">更新日期</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>comments</code></td>
+<td style="text-align:center">开启文章的评论功能</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>tags</code></td>
+<td style="text-align:center">标签（不适用于分页）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>categories</code></td>
+<td style="text-align:center">分类（不适用于分页）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>permalink</code></td>
+<td style="text-align:center">覆盖文章网址</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>其中，分类和标签需要区别一下，分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。</p>
+<pre><code class="lang-markdown">categories:
+    - Diary
+tags:
+    - PS3
+    - Games
+</code></pre>
+<h4 id="2-更换主题"><a href="#2-更换主题" class="headerlink" title="2. 更换主题"></a>2. 更换主题</h4><p>如果觉得默认的 <code>landscape</code> 主题不好看，那么可以在官网的主题中，选择你喜欢的一个主题<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网主题</a> </p>
+<p>直接在github链接上下载下来，然后放到 <code>theme</code> 文件夹下就行了，然后再在刚才说的配置文件中把 <code>theme</code> 换成那个主题文件夹的名字，它就会自动在 <code>theme</code> 文件夹中搜索你配置的主题。</p>
+<p>而后进入 <code>hueman</code> 这个文件夹，可以看到里面也有一个配置文件 <code>_config.xml</code>，貌似它默认是 <code>_config.xml.example</code> ，把它复制一份，重命名为 <code>_config.xml</code> 就可以了。这个配置文件是修改你整个主题的配置文件。</p>
+<h4 id="3-git分支进行多终端工作"><a href="#3-git分支进行多终端工作" class="headerlink" title="3.git分支进行多终端工作"></a>3.git分支进行多终端工作</h4><blockquote>
+<p>如果有两台电脑就会碰见这个问题，你现在在自己的笔记本上写的博客，部署再了网站上，那么你在家里用台式机，或者实验室的台式机，发现你电脑里面没有博客的文件，或者要换电脑了，最后不知道怎么移动文件，怎么办？在这里我们就可以利用git的分支系统进行多终端工作了，这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作了。</p>
+</blockquote>
+<p><strong>机制</strong></p>
+<blockquote>
+<p><code>hexo d</code> 部署到 GitHub 上的其实是 hexo 编译后的文件，是用来生成网页的，不包含源文件。去 GitHub 上查看，并没有 source 等源文件在上面，也就是上传的是在本地目录里自动生成的<code>.deploy_git</code>里面。其他文件 ，包括我们写在 source 里面的，和配置文件，主题文件，都没有上传到 GitHub.</p>
+</blockquote>
+<p>可以利用 git ，将源文件上传到 GitHub 的另一个分支。</p>
+<p><strong>上传分支</strong></p>
+<blockquote>
+<p>在 GitHub 中的博客仓库新建一个 hexo 分支，然后在这个仓库的 settings 中，选择默认分支为 hexo分支（这样每次同步的时候就不用指定分支，更方便）。</p>
+</blockquote>
+<p>然后在想要保存的目录下，输入以下命令：</p>
+<pre><code class="lang-linux">git clone git@github.com:YourGitHubName/YourGitHubName.github.io.git
+</code></pre>
+<p>将其克隆到本地，因为默认分支已经设成了hexo，所以clone时只clone了hexo。</p>
+<p>接下来在克隆到本地的<code>YourGitHubName.github.io</code>中，把除了.git 文件夹外的所有文件都删掉，把之前我们写的博客源文件全部复制过来，除了<code>.deploy_git</code>。这里应该说一句，复制过来的源文件应该有一个<code>.gitignore</code>，用来忽略一些不需要的文件，如果g没有的话，自己新建一个，在里面写上如下，表示这些类型文件不需要git：</p>
+<pre><code class="lang-gitignore">.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+</code></pre>
+<blockquote>
+<p>注意，如果你之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为git不能嵌套上传，最好是显示隐藏文件，检查一下有没有，否则上传的时候会出错，导致你的主题文件无法上传，这样你的配置在别的电脑上就用不了了。</p>
+</blockquote>
+<p>然后：</p>
+<pre><code class="lang-git">git add .
+git commit –m &quot;add branch&quot;
+git push
+</code></pre>
+<p>这样就上传完了，可以去你的github上看一看hexo分支有没有上传上去，其中<code>node_modules</code>、<code>public</code>、<code>db.json</code>已经被忽略掉了，没有关系，不需要上传的，因为在别的电脑上需要重新输入命令安装 。</p>
+<p><strong>更换电脑后</strong></p>
+<p>跟前面搭建环境一样：</p>
+<ul>
+<li>安装git</li>
+</ul>
+<pre><code class="lang-linux">sudo apt-get install git
+</code></pre>
+<ul>
+<li>设置git全局邮箱和用户名</li>
+</ul>
+<pre><code class="lang-git">git config --global user.name &quot;yourgithubname&quot;
+git config --global user.email &quot;yourgithubemail&quot;
+</code></pre>
+<ul>
+<li>设置ssh key</li>
+</ul>
+<pre><code class="lang-git">ssh-keygen -t rsa -C &quot;youremail&quot;
+#生成后填到github和coding上（有coding平台的话）
+#验证是否成功
+ssh -T git@github.com
+ssh -T git@git.coding.net #(有coding平台的话)
+</code></pre>
+<ul>
+<li>安装node.js</li>
+</ul>
+<pre><code class="lang-linux">sudo apt-get install node.js
+sudo apt-get install npm
+</code></pre>
+<ul>
+<li>安装hexo</li>
+</ul>
+<pre><code class="lang-linux">sudo npm install hexo-cli -g
+</code></pre>
+<ul>
+<li>获取博客源码</li>
+</ul>
+<pre><code class="lang-linux">git clone git@………………
+</code></pre>
+<ul>
+<li>进入文件夹</li>
+</ul>
+<pre><code class="lang-linux">cd xxx.github.io
+npm install
+npm install hexo-deployer-git --save
+</code></pre>
+<ul>
+<li>生成网页，部署</li>
+</ul>
+<pre><code class="lang-linux">hexo g
+hexo d
+</code></pre>
+<p>然后就可以写新的博客了</p>
+<p>记得每次写完都把源文件上传一下</p>
+<pre><code class="lang-git">git add .
+git commit –m &quot;xxxx&quot;
+git push
+</code></pre>
+<p>如果是在已经编辑过的电脑上，已经有clone文件夹了，那么，每次只要和远端同步一下就行了</p>
+<pre><code class="lang-git">git pull
+</code></pre>
+<h4 id="4-coding-page-上部署实现国内外分流"><a href="#4-coding-page-上部署实现国内外分流" class="headerlink" title="4.coding page 上部署实现国内外分流"></a>4.coding page 上部署实现国内外分流</h4><blockquote>
+<p>之前我们已经把hexo托管在github了，但是github是国外的，而且百度的爬虫是不能够爬取github的，所以如果你希望你做的博客能够在百度引擎上被收录，而且想要更快的访问，那么可以在国内的coding page做一个托管，这样在国内访问就是coding page，国外就走github page。</p>
+</blockquote>
+<ol>
+<li><p>申请 coding 账户，新建项目</p>
+<p>先申请一个账户，然后创建新的项目，这一步项目名称应该是随意的。</p>
+</li>
+<li><p>添加ssh key</p>
+<p>这步跟github一样</p>
+<p>添加完后，检查一下是否添加成功</p>
+<pre><code class="lang-git">ssh -T git@git.coding.net
+</code></pre>
+</li>
+<li><p>修改 _config.yml</p>
+<p>hexo官方文档是这样的：</p>
+<pre><code class="lang-yml">deploy:
+  type: git
+  message: [message]
+  repo:
+    github: &lt;repository url&gt;,[branch]
+    coding: &lt;repository url&gt;,[branch]
+</code></pre>
+<p>我们只需要：</p>
+<pre><code class="lang-yml">deploy:
+  type: git
+  repo: 
+    coding: git@git.coding.net:ZJUFangzh/ZJUFangzh.git,master
+    github: git@github.com:ZJUFangzh/ZJUFangzh.github.io.git,master
+</code></pre>
+</li>
+<li><p>部署</p>
+<p>保存一下，直接</p>
+<pre><code class="lang-linux">hexo g
+hexo d
+</code></pre>
+<p>这样就可以再coding的项目上看到你的部署的文件了</p>
+</li>
+<li><p>开心coding pages服务，绑定域名</p>
+</li>
+<li><p>阿里云添加解析</p>
+</li>
+<li><p>去除coding page的跳转广告</p>
+<p>coding page的一个比较恶心人的地方就是，你只是银牌会员的话，访问会先跳转到一个广告，再到你自己的域名。那么它也给出了消除的办法。右上角切换到coding的旧版界面，默认新版是不行的。然后再来到<code>pages服务</code>这里。</p>
+<p>只要你在页面上添加一行文字，写<code>Hosted by Coding Pages</code>，然后点下面的小勾勾，两个工作日内它就会审核通过了。</p>
+<pre><code class="lang-html">&lt;p&gt;Hosted by &lt;a href=&quot;https://pages.coding.me&quot; style=&quot;font-weight: bold&quot;&gt;Coding Pages&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+<p>我的选择是把这一行代码放在主题文件夹<code>/layout/common/footer.ejs</code>里面，也就是本来在页面中看到的页脚部分。</p>
+<p>当然，为了统一，我又在后面加上了and <strong>Github</strong>哈哈，可以不加。</p>
+<pre><code class="lang-html">&lt;p&gt;&lt;span&gt;Hosted by &lt;a href=&quot;https://pages.coding.me&quot; style=&quot;font-weight: bold&quot;&gt;Coding Pages&lt;/a&gt;&lt;/span&gt; and &lt;span&gt;&lt;a href=&quot;https://github.com&quot; style=&quot;font-weight: bold&quot;&gt;Github&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="第三部分"><a href="#第三部分" class="headerlink" title="第三部分"></a>第三部分</h2><h3 id="hexo添加各种功能，包括搜索的SEO，阅读量统计，访问量统计和评论系统等。请转-visugar"><a href="#hexo添加各种功能，包括搜索的SEO，阅读量统计，访问量统计和评论系统等。请转-visugar" class="headerlink" title="hexo添加各种功能，包括搜索的SEO，阅读量统计，访问量统计和评论系统等。请转 visugar"></a>hexo添加各种功能，包括搜索的SEO，阅读量统计，访问量统计和评论系统等。请转 <a href="http://visugar.com/2017/08/01/20170801HexoPlugins/" target="_blank" rel="noopener">visugar</a></h3>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/wechatpay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/11/linuxSolveNeteaseCloudMusicBug/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic009.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic009.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Linux 网易云音乐的一些Bug</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/11/recursionAndRecursion/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic015.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic015.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                递归与递推</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        notify: true, // 邮件提醒!!!
+        verify: true, // 验证码
+        appId: "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz",
+        appKey: "pwG2i33AWjwOOQnEPqLwuW62",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.cputern.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png" itemprop="image" alt="Tern" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.cputern.top" itemprop="url" rel="author">Tern</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 CPUTern<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by GitHub&Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">CPUTern</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/TernYoung" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=&site=975429539&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人链
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2690960268"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

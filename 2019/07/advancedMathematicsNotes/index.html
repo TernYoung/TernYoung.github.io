@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">高等数学笔记 | CPUTern</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "CPUTern";
+  mashiro_option.author_name = "Tern";
+  mashiro_option.site_url = "www.cputern.top";
+  mashiro_option.v_appId = "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz";
+  mashiro_option.v_appKey = "pwG2i33AWjwOOQnEPqLwuW62";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic001.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic002.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic003.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic028.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic005.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic007.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic008.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic035.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic010.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic022.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8ed631e35fec02d0275a0fec8cd93734";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="www.cputern.top">
+          <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Shit Happens But Life Goes On</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/TernYoung" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/weChat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">CPU</span>
+            <span class="shironeko">Tern</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic003.jpg);" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic003.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      高等数学笔记</h1>
+      <p class="entry-census">
+        <span>
+          <a href="cputern.top">
+            <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png">
+          </a>
+        </span>
+        <span>
+          <a href="cputern.top">Tern</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-7-24<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h4 id="求极限"><a href="#求极限" class="headerlink" title="求极限"></a>求极限</h4><p>几个重要极限（常用）：$\underset{x\rightarrow 0}{\lim}\frac{\sin x}{x}=1$ ，$\underset{x\rightarrow 0}{\lim}\frac{\tan x}{x}=1$  , $\underset{x\rightarrow 0}{\lim}\frac{\arcsin x}{x}=1$ , $\underset{x\rightarrow \infty}{\lim}\left( 1+\frac{1}{x} \right) ^x=e$ (强行凑成这样)</p>
+<p>常用等价无穷小： $x\rightarrow 0$ 时，</p>
+<p>$\sin x\Longleftrightarrow x,\tan x\Longleftrightarrow x,\arcsin x\Longleftrightarrow x,\arctan x\Longleftrightarrow x $ </p>
+<p> $\ln \left( 1+x \right) \Longleftrightarrow x,e^x-1\Longleftrightarrow x,a^x-1\Longleftrightarrow x\ln a,$</p>
+<p>$1-\cos x\Longleftrightarrow \frac{1}{2}x^2,\left( 1+x \right) ^{\alpha}-1\Longleftrightarrow \alpha x$</p>
+<p>常用技巧：1.上下同除$x$ 2.换元 3.取倒数 4.分子有理化 5.洛必达法则</p>
+<h4 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h4><p>基本导数：<br> $\left( a^x \right) ‘=a^x\ln a,\left( \log _ax \right) ‘=\frac{1}{x\ln a} $</p>
+<p>$\left( \arcsin x \right) ‘=\frac{1}{\sqrt{1-x^2}},\left( \arccos x \right) ‘=-\frac{1}{\sqrt{1-x^2}},\left( \arctan x \right) ‘=\frac{1}{1+x^2},\left( arccot x \right) ‘=-\frac{1}{1+x^2} $</p>
+<p>$ \left( \tan x \right) ‘=\sec ^2x,\left( \cot x \right) ‘=-\csc ^2x  \left( \sec x \right) ‘=\sec x\tan x,\left( \csc x \right) ‘=-\csc x\cot x$</p>
+<p>高阶导：1.因式除法，化真分式 2.裂项 3.降幂 4.取对数<br>$\left( \sin x \right) ^n=\sin \left( x+n-\frac{\pi}{2} \right) $<br>$\left( \cos x \right) ^n=\cos \left( x+n-\frac{\pi}{2} \right) $ </p>
+<h4 id="求近似"><a href="#求近似" class="headerlink" title="求近似"></a>求近似</h4><p>$\sin x\approx  x,\tan x\approx  x, \ln \left( 1+x \right) \approx  x,e^x\approx  1+x,\left( 1+x \right) ^{\alpha}\approx  1+\alpha x$ </p>
+<h4 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h4><p>$\int{\sec x\ dx=\ln\text{|}\sec x\ +\ \tan x|+C}$ </p>
+<p>1.凑微分</p>
+<ul>
+<li>常用凑微分</li>
+<li>$f(x)g(x)$ 或 $\frac{f\left( x \right)}{g\left( x \right)}$ 对$f(x)$ 求导 $\rightarrow$ $g(x) or Ag(x)$ 形式，$\int{f\left( x \right) g\left( x \right) \ dx=\frac{1}{A}\int{f\left( x \right) Ag\left( x \right) \ dx=\frac{1}{A}}}\int{f\left( x \right) df\left( x \right)}$ </li>
+<li>上下同乘一式恒等变形，常乘的有$e^{ax},x^\beta,sinx,cosx$等</li>
+</ul>
+<p>2.换元<br>令 $x=g(u), \int{f\left( x \right) \ dx=\int{f\left( g\left( u \right) \right) \ dg\left( u \right) =\int{f\left( g\left( u \right) \right) g\left( u \right) ^,dx}}}$  （易积分）</p>
+<ul>
+<li>三角代换, $\sqrt{a^2-x^2}$ 令 $x=asint (|t|&lt;\frac{\pi}{2})$  等</li>
+<li>根式代换，令$\sqrt{x}=t$ </li>
+<li>倒代换, 令 $x = \frac{1}{t}$ </li>
+<li>复杂函数直接代换 ,令 $a^x,e^x,lnx,arcsinx,arctanx$ 等 =t</li>
+</ul>
+<p>3.分部积分<br>$\int{u\ dv=}uv-\int{vdu}$ 求$\int{udv}$ 难，求$\int{vdu}$ 易</p>
+<p>4.有理函数积分<br>$(ax+b)\rightarrow \frac{A}{ax+b}$ ,$px^2+qx+r\rightarrow\frac{Ax+B}{px^2+qx+r}$ </p>
+<h4 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h4><p>1.变量可分离型 : $\frac{dy}{dx}=f(x)g(y) \rightarrow \int{\frac{dy}{g(y)}=\int{f(x)dx}}$  </p>
+<p>例: $xy^,-ylny=0$  (P308)  $\frac{dy}{dx}=2xy$  (P304)</p>
+<p>2.齐次 : 可化成$\frac{dy}{dx}=\varphi(\frac{y}{x})$   令 $u=\frac{y}{x}$ 则有$\int{\frac{du}{\varphi(u)-u}}=\int{\frac{dx}{x}}$ </p>
+<p>例：$y^2+x^2\frac{dy}{dx}=xy\frac{dy}{dx}$ (P310)  $xy^,-y-\sqrt{y^2-x^2}=0$ (P314)</p>
+<p>3.一阶线性微分方程$y^,+P(x)y=Q(x) , Q(x)=0则为齐次, Q(x)\ne0 则为非齐次$ </p>
+<p>公式：$y=e^{-\int{P(x)dx}}(\int{Q(x)}e^{\int{P(x)dx}}dx + C)$ </p>
+<p>例：$\frac{dy}{dx}-\frac{2y}{x+1}=(x+1)^{\frac{5}{2}}$  (P316)  $\frac{dy}{dx}+y=e^{-x}$ (P320)</p>
+<p>4.可降阶的高阶</p>
+<ul>
+<li><p>$y^{(n)} =f(x)$多次求积分<br>例：$y^{,,,} = e^{2x}-cosx$ (P322)</p>
+</li>
+<li><p>$y^{,,}=f(x,y^,)$ (P323)  令y^,=p</p>
+<p>例：$ (1+x^2)y^{,,}=2xy^,,y|_{x=0}=1,y^, |_{x=0}=3$  (P323)</p>
+</li>
+<li><p>$y^{,,}=f(y,y^,)$ 令$y^,=p$ 则$y^{,,}=p\frac{dp}{dy}$   (P326)</p>
+<p>例: $yy^{,,}-y^,{^2}=0$     $y^{,,}=x+sinx$      (P329)</p>
+</li>
+</ul>
+<p>5.高阶线性微分方程（P331）</p>
+<p>6.常系数齐次：$y^{,,}+py^,+qy=0$ </p>
+<p>解法：</p>
+<blockquote>
+<p>$r^2+pr+q=0$<br>求：$r_1,r_2$<br>不相等实根：$r_1,r_2$, $y=C_1e^{r_1x}+C_2e^{r_2x}$<br>相等实数根：$r_1,r_2$, $y=(C_1+C_2x)e^{r_1x}$ </p>
+<p>共轭复根：$r_{1,2}=\alpha\pm\beta i,y=e^{\alpha x}(C_1cos\beta x+C_2sin\beta x)$ </p>
+</blockquote>
+<p>例：$y^{‘’}-2y^{‘}-3y=0$ （P341）  $y^{‘’}+y^{‘}-2y=0$    (P346)</p>
+<p>7.常系数非齐次： $y^{‘’}+py^{‘}+qy=f(x)$ </p>
+<p>齐次通+特</p>
+<p>$f(x)=e^{\lambda x}P_m(x)$型</p>
+<p>$y^* = x^kR_m(x)e^{\lambda x}  , R_{(m)}=b_0r_1+b_1r_2$</p>
+<p>例： $y^{“}-2y^{‘}-3y=3x+1$  (P349)  $2y^{‘’}+y^{‘}-y=2e^x$ </p>
+<h4 id="第八章-空间解析几何与向量代数"><a href="#第八章-空间解析几何与向量代数" class="headerlink" title="第八章 空间解析几何与向量代数"></a>第八章 空间解析几何与向量代数</h4><p>1.两点距：$\sqrt{\left( x_2-x_1 \right) ^2+\left( y_2-y_1 \right) ^2+\left( z_2-z_1 \right) ^2}$</p>
+<p>2.两平面夹角：$\cos \varTheta =\frac{|A_1A_2+B_1B_2+C_1C_2|}{\sqrt{A_1^2+B_1^2+C_1^2}\sqrt{A_2^2+B_2^2+C_2^2}}$ （法向量夹角）<br>3.求平面方程：点，法 （p25）</p>
+<p>4.求直线方程：点，向      $<br>\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p},\text{参}\left\{ \begin{array}{c}<br>    x=x_0+mt\\<br>    y=y_0+nt\\<br>    z=z_0+pt\\<br>\end{array} \right.<br>$ (p31)</p>
+<p>5.两直线夹角：$<br>\cos \varphi =\frac{|m_1m_2+n_1n_2+p_1p_2|}{\sqrt{m_1^2+n_1^2+p_1^2}\sqrt{m_2^2+n_2^2+p_2^2}}<br>$ 方向向量 （p32）</p>
+<p>6.直线与平面夹角：$<br>\sin \varphi =\frac{|Am+Bn+Cp|}{\sqrt{A^2+B^2+C^2}\sqrt{m^2+n^2+p^2}}<br>$ ABC为法，m,n,p为方向<br>平面束方程：直线 $<br>\left\{ \begin{array}{c}<br>    A_1x+B_1y+C_1z+D_1=0\\<br>    A_2x+B_2y+C_2z+D_2=0\\<br>\end{array} \right.<br>$<br>束于直线的平面： $<br>A_1x+B_1y+C_1z+D_1+\lambda \left( A_2x+B_2y+C_2z+D_2 \right) =0<br>$ </p>
+<p>7.椭圆椎面：$<br>\frac{x^2}{a^2}+\frac{y^2}{b^2}=z^2<br>$ ，椭圆抛物：$<br>\frac{x^2}{a^2}+\frac{y^2}{b^2}=z<br>$<br>椭球：$<br>\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1<br>$<br>单叶双曲面：$<br>\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1<br>$<br>双叶双曲面：$<br>\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1<br>$ </p>
+<p>8.点面距：$<br>d=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}<br>$ </p>
+<h4 id="第九章-多元函数微分方程及其应用"><a href="#第九章-多元函数微分方程及其应用" class="headerlink" title="第九章 多元函数微分方程及其应用"></a>第九章 多元函数微分方程及其应用</h4><pre><code class="lang-mermaid">graph LR
+
+A(偏导连续)--&gt;B(可微)
+B --&gt; C(偏导存在)
+B --&gt; D(连续)
+D --&gt; E(极限存在)
+</code></pre>
+<p>1.二重极限$<br>\rightarrow<br>$ 化一重极限</p>
+<p>例：$<br>\lim_{\left( x,y \right) \rightarrow \left( \text{0,}1 \right)} \frac{1-xy}{x^2+y^2}<br>$ (p65)</p>
+<p>2.求偏导</p>
+<p>例：求$<br>z=x^2+3xy+y^2<br>$ 在$(1,2)$ 处偏导（p67）</p>
+<p>3.求微分（全微分）</p>
+<p>例：求$z=x^2y+y^2$ 全微分（p75）</p>
+<p>例：求$z=xy+\frac{x}{y}$  (p77)</p>
+<p>4.多元复合函数求导</p>
+<ul>
+<li>$z=f(u,v)$ 可微，$u=\varphi (x,y)$ ,$v=\psi (x,y)$ 偏导存在    （横向相乘，纵向相加）$z\,\,_{v\,\,y}^{u\,\,x}$ </li>
+</ul>
+<script type="math/tex; mode=display">
+\frac{\text{d}z}{\text{d}x}=\frac{\partial z}{\partial u}\frac{\text{d}u}{\text{d}x}+\frac{\partial z}{\partial v}\frac{\text{d}v}{\text{d}x}
+\\
+=f_1^,\frac{du}{dx}+f_2^,\frac{dv}{dx}
+\\
+\frac{\text{d}z}{\text{d}y}=\frac{\partial z}{\partial u}\frac{\text{d}u}{\text{d}y}+\frac{\partial z}{\partial v}\frac{\text{d}v}{\text{d}y}</script><ul>
+<li><p>$z=f(u,v)$,$u=\varphi (t)$,$v=\psi (t)$.   $z\,\,_{v}^{u}\,\,t$ </p>
+<script type="math/tex; mode=display">
+\frac{\text{d}z}{\text{d}t}=\frac{\partial z}{\partial u}\frac{\text{d}u}{\text{d}t}+\frac{\partial z}{\partial v}\frac{\text{d}v}{\text{d}t}</script></li>
+<li><p>$z=f(u)$ ,$u=\varphi (x,y)$.    $z\,\,u\,\,_{x}^{y}$  </p>
+<script type="math/tex; mode=display">
+\frac{\text{d}z}{\text{d}x}=\frac{\partial z}{\partial u}\frac{\text{d}u}{\text{d}x}</script></li>
+<li><p>$z=f(u,v,x,y)$ ,$u=\varphi (x,y)$,$v=\psi (x,y)$.     $z\,\,_{_{y}^{x}}^{_{v}^{u}}\,\,_{y}^{x}$</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\frac{\text{d}z}{\text{d}x}=\frac{\partial z}{\partial u}\frac{\text{d}u}{\text{d}x}+\frac{\partial z}{\partial v}\frac{\text{d}v}{\text{d}x}+\frac{\text{d}z}{\text{d}x}</script><p>例：$z=e^u\sin v,u=xy,v=x+y$  求 $\frac{\partial z}{\partial x}$ 和  $\frac{\partial z}{\partial y}$ (P81)</p>
+<p>5.隐函数求导 (两边求导法)</p>
+<script type="math/tex; mode=display">
+f(x,y,z)=0
+\\
+\frac{\partial z}{\partial x}=-\frac{F_{x}^{,}}{F_{z}^{,}}\,\,\frac{\partial z}{\partial y}=-\frac{F_{y}^{,}}{F_{z}^{,}}</script><p>例：$\ln \sqrt{x^2+y^2}=\arctan \frac{y}{x}$ 求 $\frac{dy}{dx}$   (P91)</p>
+<p>6.求空间曲线切线与法平面</p>
+<p>曲线: $\varGamma \left\{ \begin{array}{c}<br>    x=x\left( t \right)\\<br>    y=y\left( t \right)\\<br>    z=z\left( t \right)\\<br>\end{array} \right.$        点 $M(x_0,y_0,z_0)$对应$t_0$   切线方向向量: $(x^,(t),y^,(t),z^,(t))$ </p>
+<p>切线: $<br>\frac{x-x_0}{x^,\left( t_0 \right)}=\frac{y-y_0}{y^,\left( t_0 \right)}=\frac{z-z_0}{z^,\left( t_0 \right)}<br>$ </p>
+<p>法平面: $x^,(t_0)(x-x_0)+y^,(t_0)(y-y_0)+z^,(t_0)(z-z_0)=0$ </p>
+<p>例: 求曲线$x=t,y=t^2,z=t^3$ 在点$(1,1,1,)$ 处切线及法平面  (P97)</p>
+<p>7.求曲面切平面与法线</p>
+<p>曲面: $\varSigma :F\left( x,y,z \right) =0$ ,点$M(x_0,y_0,z_0),法向量(F_x^,(x_0,y_0,z_0),F_y^,(x_0,y_0,z_0),F_z^,(x_0,y_0,z_0))$ </p>
+<p>法线:$<br>\frac{x-x_0}{Fx\left( x_0+y_0+z_0 \right)}=\frac{y-y_0}{Fy\left( x_0+y_0+z_0 \right)}=\frac{z-z_0}{Fz\left( x_0+y_0+z_0 \right)}<br>$ </p>
+<p>切平面: $F_x(x_0,y_0,z_0)(x-x_0)+F_y(x_0,y_0,z_0)(y-y_0)+F_z(x_0,y_0,z_0)(z-z_0)=0$ </p>
+<p>例: 求球面$x^2+y^2+z^2=14$ 在点$(1,2,3)$处切平面及法线   (P102)</p>
+<p>8.方向导数</p>
+<p>​    a.方向向量 $e$  单位化:$e_l(\cos \alpha ,\cos \beta )$</p>
+<p>​    b.$\frac{\partial f}{\partial l}=\frac{\partial f}{\partial x}\cos \alpha +\frac{\partial f}{\partial y}\cos \beta $ </p>
+<p>例: 求$z=xe^{2y}$ 在点$P(1,0)$，求P(1,0)到Q(2,-1)的方向导数  (P105)</p>
+<p>9.求梯度$z=f(x_{12})$ </p>
+<p>​    $gradf(x,y)=f_x(x_0,y_0)\overset{\rightharpoonup}{i}+f_y(x_0,y_0)\overset{\rightharpoonup}{j}$ </p>
+<p>例：求$grad\frac{1}{x^2+y^2}$ P(108)</p>
+<p>10.求极值</p>
+<p>$z=f(x,y)$ </p>
+<p>$\left\{ \begin{array}{l}<br>    f_x=0\\<br>    f_y=0\\<br>\end{array} \right. $ 求所有驻点，</p>
+<p>对每个驻点$(x_0,y_0)$ 在$A=f_{xx}(x_0,y_0),B=f_{xy}(x_0,y_0),C=f_{yy}(x_0,y_0)$</p>
+<ul>
+<li><p>若$AC-B^2&gt;0,A&gt;0$ ,极小</p>
+<p>​    $AC-B^2&gt;0,A&lt;0$ ,极大</p>
+</li>
+<li><p>$AC-B^2&lt;0$,无</p>
+</li>
+<li>$AC-B^2=0$ ,不定</li>
+</ul>
+<p>例子：求$f(x,y)=x^3-y^3+3*x^2+3y^2-9x$的极值 (P113)</p>
+<p>11.求条件极值</p>
+<p>$z=f(x,y) 在\varphi(x,y)=0下的极值$ </p>
+<p>解：令$L(x,y)=f(x,y)+\lambda \varphi(x,y)$ </p>
+<p>$\left\{ \begin{array}{l}<br>    Lx=0\\<br>    Ly=0\\<br>    \varphi \left( x,y \right) =0\\<br>\end{array} \right. $ $\left\{ \begin{array}{l}<br>    x=x_0\\<br>    y=y_0\\<br>\end{array} \right. $ </p>
+<p>例：求$z=xy$ 在$x+y=1$下的极值</p>
+<h4 id="第十章-重积分"><a href="#第十章-重积分" class="headerlink" title="第十章 重积分"></a>第十章 重积分</h4><p>1.利用直角坐标算二重积分</p>
+<p>例：计算$\iint_D{xyd\sigma}$ 其中D由$y=1,x=2及y=x$所围成的闭区域 (P144)</p>
+<p>2.利用极坐标</p>
+<p>例：计算$\iint_D{e^{-x^2-y^2}dxdy}$ ,其中D是由目心在原点，半径为a的圆周所围成闭区域 P150 P156</p>
+<p>3.重积分的应用</p>
+<h4 id="第十一章-曲线积分与曲面积分"><a href="#第十一章-曲线积分与曲面积分" class="headerlink" title="第十一章 曲线积分与曲面积分"></a>第十一章 曲线积分与曲面积分</h4><p>1.计算第一类曲线积分（P192）</p>
+<p>2.计算第二类曲线积分 (P199)</p>
+<p>3.两类积分的联系 (P199)</p>
+<p>4.格林公式 (P207)</p>
+<h4 id="第十二章-无穷级数"><a href="#第十二章-无穷级数" class="headerlink" title="第十二章 无穷级数"></a>第十二章 无穷级数</h4><p>等比级数|q|<1,收，|q|>=1发，</1,收，|q|></p>
+<p>P级数：$1+\frac{1}{2^p}+\frac{1}{3^p}+…+\frac{1}{n^p}$  p&gt;1收，p&lt;=1发</p>
+<p>比较审敛法：大收小收，小发大发</p>
+<p>比值法：$\underset{n\longrightarrow \infty}{\lim}\frac{u_{n+1}}{u_n}=p,\underset{n\longrightarrow \infty}{\lim}\sqrt[n]{u_n}=p,p<1收，p>1发，p=1 无法判断$</1收，p></p>
+<p> 幂级数</p>
+<p>收敛半径求法：$\underset{n\longrightarrow \infty}{\lim}|\frac{u_{n+1}}{u_n}|=p,R=\left\{ \begin{array}{l}<br>    \frac{1}{p},0&lt;p&lt;+\infty\\<br>    0,p=+\infty\\<br>    +\infty ,p=0\\<br>\end{array} \right. $ </p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/wechatpay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/07/matlabStudyNotes/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic012.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic012.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Matlab学习电记</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/07/primeSieve/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic014.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic014.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                素数筛法</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        notify: true, // 邮件提醒!!!
+        verify: true, // 验证码
+        appId: "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz",
+        appKey: "pwG2i33AWjwOOQnEPqLwuW62",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="cputern.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png" itemprop="image" alt="Tern" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="cputern.top" itemprop="url" rel="author">Tern</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 CPUTern<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by GitHub&Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">CPUTern</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/TernYoung" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=&site=975429539&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人链
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2690960268"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

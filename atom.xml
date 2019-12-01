@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CPUTern</title>
+  
+  <subtitle>脑阔子疼</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.cputern.top/"/>
+  <updated>2019-12-01T10:32:25.887Z</updated>
+  <id>http://www.cputern.top/</id>
+  
+  <author>
+    <name>CPUTern</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu修改swap分区大小</title>
+    <link href="http://www.cputern.top/2019/12/UbuntuModifySwapPartitionSize/"/>
+    <id>http://www.cputern.top/2019/12/UbuntuModifySwapPartitionSize/</id>
+    <published>2019-12-01T07:27:23.000Z</published>
+    <updated>2019-12-01T10:32:25.887Z</updated>
+    
+    <summary type="html">
+    
+      Ubuntu修改swap分区大小
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://www.cputern.top/tags/Ubuntu/"/>
+    
+      <category term="swap分区" scheme="http://www.cputern.top/tags/swap%E5%88%86%E5%8C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java操作MySQL数据库</title>
+    <link href="http://www.cputern.top/2019/11/JavaConnectMySQL/"/>
+    <id>http://www.cputern.top/2019/11/JavaConnectMySQL/</id>
+    <published>2019-11-30T08:27:23.000Z</published>
+    <updated>2019-11-30T09:04:06.676Z</updated>
+    
+    <summary type="html">
+    
+      Java操作MySQL
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="MySQL" scheme="http://www.cputern.top/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jsDelivr+Github搭建免费CDN</title>
+    <link href="http://www.cputern.top/2019/11/buildFreeCDNbyJsdelivrAndGithub/"/>
+    <id>http://www.cputern.top/2019/11/buildFreeCDNbyJsdelivrAndGithub/</id>
+    <published>2019-11-28T11:17:36.000Z</published>
+    <updated>2019-11-28T11:51:02.947Z</updated>
+    
+    <summary type="html">
+    
+      jsDelivr+Github搭建免费CDN
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="CDN" scheme="http://www.cputern.top/tags/CDN/"/>
+    
+      <category term="jsDelivr" scheme="http://www.cputern.top/tags/jsDelivr/"/>
+    
+      <category term="Github" scheme="http://www.cputern.top/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu下安装QQ</title>
+    <link href="http://www.cputern.top/2019/11/QQOnLinux/"/>
+    <id>http://www.cputern.top/2019/11/QQOnLinux/</id>
+    <published>2019-11-27T12:35:36.000Z</published>
+    <updated>2019-11-27T15:08:36.706Z</updated>
+    
+    <summary type="html">
+    
+      Ubuntu下安装QQ
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://www.cputern.top/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="http://www.cputern.top/tags/Linux/"/>
+    
+      <category term="QQ" scheme="http://www.cputern.top/tags/QQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回溯法</title>
+    <link href="http://www.cputern.top/2019/11/backtracking/"/>
+    <id>http://www.cputern.top/2019/11/backtracking/</id>
+    <published>2019-11-27T03:27:23.000Z</published>
+    <updated>2019-11-27T03:55:29.385Z</updated>
+    
+    <summary type="html">
+    
+      回溯法学习
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="http://www.cputern.top/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="回溯法" scheme="http://www.cputern.top/tags/%E5%9B%9E%E6%BA%AF%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 网易云音乐的一些Bug</title>
+    <link href="http://www.cputern.top/2019/11/linuxSolveNeteaseCloudMusicBug/"/>
+    <id>http://www.cputern.top/2019/11/linuxSolveNeteaseCloudMusicBug/</id>
+    <published>2019-11-21T12:38:45.000Z</published>
+    <updated>2019-11-26T15:49:34.432Z</updated>
+    
+    <summary type="html">
+    
+      修复Linux 网易云音乐的一些Bug
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Linux" scheme="http://www.cputern.top/tags/Linux/"/>
+    
+      <category term="网易云音乐" scheme="http://www.cputern.top/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo搭建个人博客</title>
+    <link href="http://www.cputern.top/2019/11/hexoBuildAPersonalBlog/"/>
+    <id>http://www.cputern.top/2019/11/hexoBuildAPersonalBlog/</id>
+    <published>2019-11-20T10:38:45.000Z</published>
+    <updated>2019-11-26T15:49:00.173Z</updated>
+    
+    <summary type="html">
+    
+      Hexo搭建博客
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.cputern.top/tags/Hexo/"/>
+    
+      <category term="Pages服务" scheme="http://www.cputern.top/tags/Pages%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>递归与递推</title>
+    <link href="http://www.cputern.top/2019/11/recursionAndRecursion/"/>
+    <id>http://www.cputern.top/2019/11/recursionAndRecursion/</id>
+    <published>2019-11-19T05:27:23.000Z</published>
+    <updated>2019-11-26T15:50:39.356Z</updated>
+    
+    <summary type="html">
+    
+      递归的讲解
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="递归" scheme="http://www.cputern.top/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="递推" scheme="http://www.cputern.top/tags/%E9%80%92%E6%8E%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些妙妙的句子</title>
+    <link href="http://www.cputern.top/2019/10/sentenceCollection/"/>
+    <id>http://www.cputern.top/2019/10/sentenceCollection/</id>
+    <published>2019-10-24T15:45:00.000Z</published>
+    <updated>2019-11-29T14:11:38.736Z</updated>
+    
+    <summary type="html">
+    
+      富含哲理
+    
+    </summary>
+    
+      <category term="生活" scheme="http://www.cputern.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="句子" scheme="http://www.cputern.top/tags/%E5%8F%A5%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chocolatey</title>
+    <link href="http://www.cputern.top/2019/10/winSoftwareManagementTool/"/>
+    <id>http://www.cputern.top/2019/10/winSoftwareManagementTool/</id>
+    <published>2019-10-10T10:43:00.000Z</published>
+    <updated>2019-11-26T15:51:08.254Z</updated>
+    
+    <summary type="html">
+    
+      Win下包管理工具
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="包管理工具" scheme="http://www.cputern.top/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="windows" scheme="http://www.cputern.top/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数论笔记</title>
+    <link href="http://www.cputern.top/2019/08/numberTheoryNotes/"/>
+    <id>http://www.cputern.top/2019/08/numberTheoryNotes/</id>
+    <published>2019-08-24T15:45:00.000Z</published>
+    <updated>2019-11-26T15:50:14.926Z</updated>
+    
+    <summary type="html">
+    
+      数论笔记
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="数论" scheme="http://www.cputern.top/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树状数组</title>
+    <link href="http://www.cputern.top/2019/08/treArray/"/>
+    <id>http://www.cputern.top/2019/08/treArray/</id>
+    <published>2019-08-17T09:54:36.000Z</published>
+    <updated>2019-11-26T15:50:59.399Z</updated>
+    
+    <summary type="html">
+    
+      数据结构之树状数组
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="数据结构" scheme="http://www.cputern.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="树状数组" scheme="http://www.cputern.top/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法分析的数学基础</title>
+    <link href="http://www.cputern.top/2019/08/mathematicsBasisOfAlgorithmAnalysis/"/>
+    <id>http://www.cputern.top/2019/08/mathematicsBasisOfAlgorithmAnalysis/</id>
+    <published>2019-08-11T03:54:36.000Z</published>
+    <updated>2019-11-26T15:49:56.776Z</updated>
+    
+    <summary type="html">
+    
+      算法分析的数学基础
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="http://www.cputern.top/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习电记</title>
+    <link href="http://www.cputern.top/2019/07/matlabStudyNotes/"/>
+    <id>http://www.cputern.top/2019/07/matlabStudyNotes/</id>
+    <published>2019-07-29T12:54:36.000Z</published>
+    <updated>2019-11-26T15:52:45.661Z</updated>
+    
+    <summary type="html">
+    
+      Matlab基础
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Matlab" scheme="http://www.cputern.top/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高等数学笔记</title>
+    <link href="http://www.cputern.top/2019/07/advancedMathematicsNotes/"/>
+    <id>http://www.cputern.top/2019/07/advancedMathematicsNotes/</id>
+    <published>2019-07-24T13:59:36.000Z</published>
+    <updated>2019-11-27T03:53:33.251Z</updated>
+    
+    <summary type="html">
+    
+      高数的一些笔记
+    
+    </summary>
+    
+      <category term="数学" scheme="http://www.cputern.top/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="高等数学" scheme="http://www.cputern.top/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>素数筛法</title>
+    <link href="http://www.cputern.top/2019/07/primeSieve/"/>
+    <id>http://www.cputern.top/2019/07/primeSieve/</id>
+    <published>2019-07-24T13:06:36.000Z</published>
+    <updated>2019-11-26T15:50:26.072Z</updated>
+    
+    <summary type="html">
+    
+      素数筛法
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="素数" scheme="http://www.cputern.top/tags/%E7%B4%A0%E6%95%B0/"/>
+    
+      <category term="数论" scheme="http://www.cputern.top/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线段树模板</title>
+    <link href="http://www.cputern.top/2019/07/lineSegmentTreeTemplate/"/>
+    <id>http://www.cputern.top/2019/07/lineSegmentTreeTemplate/</id>
+    <published>2019-07-18T14:26:23.000Z</published>
+    <updated>2019-11-26T15:49:24.237Z</updated>
+    
+    <summary type="html">
+    
+      线段树模板
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="线段树" scheme="http://www.cputern.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo添加百度统计和Livere(来必应)评论插件</title>
+    <link href="http://www.cputern.top/2019/07/hexoAddBaiduStatisticsAndLivereCommentPlugin/"/>
+    <id>http://www.cputern.top/2019/07/hexoAddBaiduStatisticsAndLivereCommentPlugin/</id>
+    <published>2019-07-17T08:53:20.000Z</published>
+    <updated>2019-11-26T15:54:00.548Z</updated>
+    
+    <summary type="html">
+    
+      hexo添加百度统计和Livere(来必应)评论插件
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="hexo" scheme="http://www.cputern.top/tags/hexo/"/>
+    
+      <category term="百度统计" scheme="http://www.cputern.top/tags/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1/"/>
+    
+      <category term="Livere" scheme="http://www.cputern.top/tags/Livere/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在hexo中使用LaTeX数学公式</title>
+    <link href="http://www.cputern.top/2019/07/hexoWith%5BLaTeX%5DMathFormula/"/>
+    <id>http://www.cputern.top/2019/07/hexoWith[LaTeX]MathFormula/</id>
+    <published>2019-07-16T10:55:34.000Z</published>
+    <updated>2019-11-26T15:49:15.616Z</updated>
+    
+    <summary type="html">
+    
+      hexo中使用LaTeX数学公式
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="hexo" scheme="http://www.cputern.top/tags/hexo/"/>
+    
+      <category term="LaTeX" scheme="http://www.cputern.top/tags/LaTeX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速幂和矩阵快速幂</title>
+    <link href="http://www.cputern.top/2019/07/fastPowerAndMatrixFastPower/"/>
+    <id>http://www.cputern.top/2019/07/fastPowerAndMatrixFastPower/</id>
+    <published>2019-07-16T05:27:23.000Z</published>
+    <updated>2019-11-28T14:15:19.687Z</updated>
+    
+    <summary type="html">
+    
+      快速幂和矩阵快速幂
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="快速幂" scheme="http://www.cputern.top/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    
+      <category term="矩阵快速幂" scheme="http://www.cputern.top/tags/%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    
+  </entry>
+  
+</feed>

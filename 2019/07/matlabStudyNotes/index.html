@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Matlab学习电记 | CPUTern</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "CPUTern";
+  mashiro_option.author_name = "Tern";
+  mashiro_option.site_url = "www.cputern.top";
+  mashiro_option.v_appId = "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz";
+  mashiro_option.v_appKey = "pwG2i33AWjwOOQnEPqLwuW62";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic001.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic002.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic003.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic028.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic005.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic007.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic008.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic035.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic010.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic022.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8ed631e35fec02d0275a0fec8cd93734";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="www.cputern.top">
+          <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Shit Happens But Life Goes On</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/TernYoung" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/weChat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">CPU</span>
+            <span class="shironeko">Tern</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic012.jpg);" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic012.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Matlab学习电记</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.cputern.top">
+            <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png">
+          </a>
+        </span>
+        <span>
+          <a href="www.cputern.top">Tern</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-7-29<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h4 id="基本运算与函数"><a href="#基本运算与函数" class="headerlink" title="基本运算与函数"></a>基本运算与函数</h4><pre><code class="lang-matlab">&gt;&gt; (1*2+3*4)/2
+ans = 7
+</code></pre>
+<p>Matlab会将运算结果直接存入一变量ans，并输出显示。</p>
+<p>也可以将结果存入一个变量:</p>
+<pre><code class="lang-matlab">&gt;&gt; x=(1*2+3*4)/2
+x = 7
+</code></pre>
+<p>变量命名规则：1.首字符为英文字母 2.字符间无空格 3.最多19个字符</p>
+<p>常用的数学运算符号有 +,-,*,/,^,%,等。</p>
+<p>Matlab默认将所有变量均存成double的形式</p>
+<p>若不想让Matlab每次都显示运算结果，只需在运算式最后加上分号;</p>
+<pre><code class="lang-matlab">&gt;&gt; x=(1*2+3*4)/2;
+</code></pre>
+<p>若要显示变量的值，直接键入即可</p>
+<pre><code class="lang-matlab">&gt;&gt; x
+x = 7
+</code></pre>
+<p>Matlab常用的基本数学函数：   </p>
+<p><code>abs(x)</code>：纯量的绝对值或向量的长度 </p>
+<p><code>angle(z)</code>：复 数z的相角(Phase angle) </p>
+<p><code>sqrt(x)</code>：开平方 </p>
+<p><code>real(z)</code>：复数z的实部 </p>
+<p><code>imag(z)</code>：复数z的虚 部 </p>
+<p><code>conj(z)</code>：复数z的共轭复数 </p>
+<p><code>round(x)</code>：四舍五入至最近整数 </p>
+<p><code>fix(x)</code>：无论正负，舍去小数至最近整数 </p>
+<p><code>floor(x)</code>：地板函数，即舍去正小数至最近整数 </p>
+<p><code>ceil(x)</code>：天花板函数，即加入正小数至最近整数 </p>
+<p><code>rat(x)</code>：将实数x化为分数表示 </p>
+<p><code>rats(x)</code>：将实数x化为多项分数展开 </p>
+<p><code>sign(x)</code>：符号函数 (Signum function)。   </p>
+<p>当x&lt;0时，sign(x)=-1；   </p>
+<p>当x=0时，sign(x)=0;   </p>
+<p>当x&gt;0时，sign(x)=1。   </p>
+<p>Matlab常用的三角函数:</p>
+<p><code>sin(x)</code>：正弦函数 </p>
+<p><code>cos(x)</code>：馀弦函数 </p>
+<p><code>tan(x)</code>：正切函数 </p>
+<p><code>asin(x)</code>：反正弦函数 </p>
+<p><code>acos(x)</code>：反馀弦函数 </p>
+<p><code>atan(x)</code>：反正切函数 </p>
+<p><code>atan2(x,y)</code>：四象限的反正切函数 </p>
+<p><code>sinh(x)</code>：超越正弦函数 </p>
+<p><code>cosh(x)</code>：超越馀弦函数 </p>
+<p><code>tanh(x)</code>：超越正切函数 </p>
+<p><code>asinh(x)</code>：反超越正弦函数 </p>
+<p><code>acosh(x)</code>：反超越馀弦函数 </p>
+<p><code>atanh(x)</code>：反超越正切函数   </p>
+<p>变量也可以用来存放向量和矩阵，并进行各种运算：</p>
+<pre><code class="lang-matlab">&gt;&gt;x = [1 2 3 4];
+&gt;&gt;y = 2*x+1
+y = 3 5 7 9
+</code></pre>
+<p>可以随意更改、增加或删除向量元素：</p>
+<pre><code class="lang-matlab">&gt;&gt;y(3) = 11 %更改
+y = 3 5 11 9
+&gt;&gt;y(6) = 12 %增加
+y = 3 5 11 9 0 12
+&gt;&gt;y(4) = [] %删除
+y = 3 5 11 0 12
+</code></pre>
+<p>%为注释符</p>
+<p>取元素出来运算：</p>
+<pre><code class="lang-matlab">&gt;&gt;2*y(3)
+ans = 22
+&gt;&gt;2*y(2:4)
+ans = 10 22 0
+</code></pre>
+<p>若对Matalb函数用法有疑问，可随时使用help查询帮助。</p>
+<pre><code class="lang-matlab">&gt;&gt;help
+matlab\datafun                 - Data analysis and Fourier transforms.
+matlab\datatypes               - Data types and structures.
+matlab\elfun                   - Elementary math functions.
+matlab\elmat                   - Elementary matrices and matrix manipulation.
+matlab\funfun                  - Function functions and ODE solvers.
+...
+</code></pre>
+<p>将行向量转置后得到列向量：</p>
+<pre><code class="lang-matlab">&gt;&gt;y&#39;
+ans = 
+        3
+        5
+        11
+        0
+        12
+</code></pre>
+<p>Matlab适用于向量的常用函数： </p>
+<p><code>min(x)</code>: 向量x的元素的最小值 </p>
+<p><code>max(x)</code>: 向量x的元素的最大值 </p>
+<p><code>mean(x)</code>: 向量x的元素的平均值 </p>
+<p><code>median(x)</code>: 向量x的元素的中位数 </p>
+<p><code>std(x)</code>: 向量x的元素的标准差 </p>
+<p><code>diff(x)</code>: 向量x的相邻元素的差 </p>
+<p><code>sort(x)</code>: 对向量x的元素进行排序（Sorting） </p>
+<p><code>length(x)</code>: 向量x的元素个数 </p>
+<p><code>norm(x)</code>: 向量x的欧氏（Euclidean）长度 </p>
+<p><code>sum(x)</code>: 向量x的元素总和 </p>
+<p><code>prod(x)</code>: 向量x的元素总乘积 </p>
+<p><code>cumsum(x)</code>: 向量x的累计元素总和 </p>
+<p><code>cumprod(x)</code>: 向量x的累计元素总乘积 </p>
+<p><code>dot(x, y)</code>: 向量x和y的内 积 </p>
+<p><code>cross(x, y)</code>: 向量x和y的外积 （大部份的向量函数也可适用于矩阵，详见下述。）  </p>
+<p>若要输入矩阵，则必须在每一列结尾加上分号;</p>
+<pre><code class="lang-matlab">&gt;&gt;A = [1 2 3 4;5 6 7 8;9 10 11 12]
+A = 
+    1 2 3 4
+    5 6 7 8
+    9 10 11 12
+</code></pre>
+<p>同样可对矩阵进行更改，增加，删除等操作：</p>
+<pre><code class="lang-matlab">&gt;&gt;A(2,3) = 5
+A =
+    1 2 3 4
+    5 6 5 8
+    9 10 11 12
+&gt;&gt;B = A(2,1:3) %取出部分矩阵
+B =
+    5 6 5
+</code></pre>
+<h4 id="定义符号变量syms"><a href="#定义符号变量syms" class="headerlink" title="定义符号变量syms"></a>定义符号变量syms</h4><p>创建符号表达式$x^2+y^2$ </p>
+<pre><code class="lang-matlab">&gt;&gt; syms x y;
+&gt;&gt; f = x^2+y^2;
+&gt;&gt; f
+f = x^2+y^2
+</code></pre>
+<p>创建符号表达式数组</p>
+<pre><code class="lang-matlab">&gt;&gt; syms x y;
+&gt;&gt; f=[x^2,y^2;x+y,x-y];
+&gt;&gt; f
+f=
+[x^2,y^2]
+[x+y,x-y]
+</code></pre>
+<p>连续定义20个符号变量$x_1,x_2,x_3…,x_{19},x_{20}$ </p>
+<pre><code class="lang-matlab">&gt;&gt; for i=1;20
+        eval(sprintf(&#39;syms x%d&#39;,i))
+   end
+&gt;&gt; whos
+</code></pre>
+<p>定义单个符号变量，将字符或数字转为符号变量sym</p>
+<pre><code class="lang-matlab">&gt;&gt; x1 = sym(&#39;x1&#39;),a = sym(&#39;sqrt(200)&#39;),v=sym(&#39;[100 200]&#39;)
+</code></pre>
+<h4 id="符号表达式的替换subs"><a href="#符号表达式的替换subs" class="headerlink" title="符号表达式的替换subs"></a>符号表达式的替换subs</h4><pre><code class="lang-matlab">&gt;&gt; syms x y z;
+&gt;&gt; f = x^2+y^2+z^2;
+&gt;&gt; g = subs(f,[x,y],[1,2]) //其它格式g=subs(f,{x,y},{1,2})
+g = 1^2+2^2+z^2 = z^2 + 5
+</code></pre>
+<h4 id="符号表达式的化简simplify"><a href="#符号表达式的化简simplify" class="headerlink" title="符号表达式的化简simplify"></a>符号表达式的化简simplify</h4><pre><code class="lang-matlab">&gt;&gt; syms x y;
+&gt;&gt; s1=simplify(cos(x)^2-sin(x)^2)
+&gt;&gt; s2=simplify(x^3+3*x^2+3*x+1)
+s1=cos(2*x)
+s2=(x+1)^3
+</code></pre>
+<h4 id="符号计算精度及其数据类型转换"><a href="#符号计算精度及其数据类型转换" class="headerlink" title="符号计算精度及其数据类型转换"></a>符号计算精度及其数据类型转换</h4><pre><code class="lang-matlab">vpa(s)         计算符号表达式s的数值结果
+vpa(s,n)     采用n位有效数字计算精度求s的数值结果
+digits         显示vpa计算结果的有效数字的位数
+digits(n)     设置vpa计算结果的有效数字的位数
+double(s)     将符号表达式s转化为双精度数值
+char(s)     将符号表达式s转化为字符串
+</code></pre>
+<h4 id="复合计算函数compose"><a href="#复合计算函数compose" class="headerlink" title="复合计算函数compose"></a>复合计算函数compose</h4><p><code>compose(f,g)</code>    返回复合函数f(g(y)),其中f=f(x),g=g(y)<br><code>compose(f,g,z)</code>    返回复合函数f(g(z)),f=f(x),g=g(y)<br><code>compose(f,g,x,y,z)</code>    返回复合函数f(g(z)) 将x=g(y)代入f(x)中，最后用指定的变量z代替变量y</p>
+<pre><code class="lang-matlab">&gt;&gt; syms x y t;
+&gt;&gt; f = 1/(1+x);
+&gt;&gt; g = sin(y)^2;
+&gt;&gt; h = compose(f,g,x,y,t)
+f = 1/(x+1)
+g = sin(y)^2
+h = 1/(sin(t)^2+1)
+</code></pre>
+<h4 id="计算极限函数limit"><a href="#计算极限函数limit" class="headerlink" title="计算极限函数limit"></a>计算极限函数limit</h4><p><code>limit(f,x,a)</code>            计算f(x)当x趋于a的极限<br><code>limit(f,x,a,&#39;right&#39;)</code>    计算右极限<br><code>limit(f,x,a,&#39;left&#39;)</code>        计算左极限</p>
+<p>求一元函数极限$\underset{x\rightarrow 0}{\lim}\frac{\sin(x)}{x}$ ，并绘图观察函数在x趋于0时函数的变化趋势</p>
+<pre><code class="lang-matlab">&gt;&gt;syms x;
+&gt;&gt;y = sin(x)/x;
+&gt;&gt;s = limit(y,x,0);
+&gt;&gt;x = -1:0.02:1;
+&gt;&gt;y = sin(x)./x;
+&gt;&gt;plot(x,y,&#39;k.&#39;);
+</code></pre>
+<h4 id="求导计算diff"><a href="#求导计算diff" class="headerlink" title="求导计算diff"></a>求导计算diff</h4><p><code>diff(s,&#39;v&#39;)</code> 求s对自变量v的1阶导数</p>
+<p><code>diff(s,&#39;v&#39;,n)</code> 求s对自变量v的n阶导数</p>
+<p>注：‘v’可为符号变量</p>
+<p>已知$f\left( x,y \right) =x^2y+2xy+y^2$ 求$\frac{\partial f}{\partial x}$ 和$\frac{\partial f}{\partial y}$ </p>
+<pre><code class="lang-matlab">&gt;&gt;syms x y;
+&gt;&gt;f = x^2*y+2*x*y+y*y;
+&gt;&gt;d1 = diff(f,x,1)
+&gt;&gt;d2 = diff(f,y,1)
+d1 = 2*y+2*x*y
+d2 = x^2+2*x+2*y
+</code></pre>
+<h4 id="符号积分函数int"><a href="#符号积分函数int" class="headerlink" title="符号积分函数int"></a>符号积分函数int</h4><p><code>int(expr,var)</code>     以expr表达式中的变量var为积分变量计算不定积分</p>
+<p><code>int(expr,var,a,b)</code>     以expr表达式中的变量var为积分变量计算定积分，积分</p>
+<p>求不定积分$\int{x\ln \left( x^2-1 \right) dx}$ </p>
+<pre><code class="lang-matlab">&gt;&gt;syms x a
+&gt;&gt;f = int(x*log(x*x-1))
+f = (x^2*log(x^2-1))/2-log(x+1)/2-x^2/2-log(x-1)/2
+</code></pre>
+<p>泰勒多项式函数taylor</p>
+<p>$f\left( x \right) =f\left( x_0 \right) +f^{‘}\left( x_0 \right) \left( x-x_0 \right) +\frac{f^{‘’}\left( x_0 \right)}{\text{2!}}\left( x-x_0 \right) ^2+…+\frac{f^{\left( n \right)}\left( x_0 \right)}{n!}\left( x-x_0 \right) ^n+R_n\left( x \right) $<code>taylor(f)</code>    计算f的5阶麦克劳林多项式</p>
+<p><code>taylor(f,v,Name,Value)</code></p>
+<p><code>taylor(f,v,a)</code>    计算f在点a展开的麦克考林多项式</p>
+<p><code>taylor(f,v,a,Name,Value)</code>    指定属性名称，属性值的调用方法。其中：f为函数的表达式或者符号变量。v为函数自变量，Name为属性名，Value为属性值。</p>
+<p>求$e^x$的7阶多项式</p>
+<pre><code class="lang-matlab">&gt;&gt;taylor(exp(x),x,0,&#39;order&#39;,8)
+ans = 
+x^7/5040 + x^6/720 + x^5/120 + x^4/24 + x^3/6 + x^2/2 + x + 1
+&gt;&gt;taylor(exp(x),x,&#39;expansionpoint&#39;,0,&#39;order&#39;,8)
+ans = 
+x^7/5040 + x^6/720 + x^5/120 + x^4/24 + x^3/6 + x^2/2 + x + 1
+</code></pre>
+<h4 id="求解方程（组）函数solve"><a href="#求解方程（组）函数solve" class="headerlink" title="求解方程（组）函数solve"></a>求解方程（组）函数solve</h4><blockquote>
+<p>s = solve(eqn1,eqn2,…,eqnM,var1,var2,…,varN)，输出一个结构体变量，未知数x的解，通过S.x获取<br>[S1,…,SN]=solve(eqn1,eqn2,…,eqnM,var1,var2,…,varN)，每个参数储存一个未知数解<br>eqn1,eqn2,…表示方程，用一个包含“==”的等式表示<br>var1,var2,…表示未知数符号<br>需先用syms命令定义符号变量</p>
+</blockquote>
+<p>求解方程$x^2+5x+=0$ </p>
+<pre><code class="lang-matlab">&gt;&gt;syms x;
+&gt;&gt;s = solve(x^2+5*x+6==0,x)
+s=
+-2
+-3
+</code></pre>
+<p>求解含参的方程组$ax+by=10,ax-by=20$ </p>
+<pre><code class="lang-matlab">&gt;&gt;syms x y a b;
+&gt;&gt;s=solve(a*x+b*y==10,a*x-b*y==20,x,y)
+&gt;&gt;s.x
+ans = 
+15/a
+&gt;&gt;s.y
+ans =
+-5/b
+</code></pre>
+<pre><code class="lang-matlab">&gt;&gt;syms x y a b;
+&gt;&gt;[s1,s2]=solve(a*x+b*y==10,a*x-b*y==20,x,y)
+&gt;&gt;s1
+ans = 
+15/a
+&gt;&gt;s2
+ans =
+-5/b
+</code></pre>
+<h4 id="求解微分方程函数dsolve"><a href="#求解微分方程函数dsolve" class="headerlink" title="求解微分方程函数dsolve"></a>求解微分方程函数dsolve</h4><blockquote>
+<p>s=dsolve(eqn1,eqn2,…,eqnD,cond1,cond2,…,condN)    输出一个结构体变量，未知数x的解，通过S.x获取<br>[s1,..s2]=dsolve(eqn1,eqn2,…,eqnD,cond1,cond2,…,condN)    每个参数储存一个未知数解<br>eqn为包含‘==’的表达式，表示微分方程<br>cond为初始条件<br>未知函数，参数应先用syms定义，例：未知函数y(t)  定义：syms y(t)<br>未知函数y的k阶导数用diff(y,k)表示</p>
+</blockquote>
+<p>求解微分方程的特解 $\frac{dy}{dt}=(10-0.02t)t,y(0)=4$ </p>
+<pre><code class="lang-matlab">&gt;&gt;syms y(t)
+&gt;&gt;ansy = dsolve(diff(y)==(10-0.02*t)*t,y(0)==4)
+ansy = 4 - (t^2*(t - 750))/150
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/wechatpay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/08/mathematicsBasisOfAlgorithmAnalysis/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic011.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic011.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                算法分析的数学基础</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/07/advancedMathematicsNotes/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic003.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic003.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                高等数学笔记</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        notify: true, // 邮件提醒!!!
+        verify: true, // 验证码
+        appId: "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz",
+        appKey: "pwG2i33AWjwOOQnEPqLwuW62",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.cputern.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png" itemprop="image" alt="Tern" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.cputern.top" itemprop="url" rel="author">Tern</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 CPUTern<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by GitHub&Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">CPUTern</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/TernYoung" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=&site=975429539&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人链
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2690960268"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

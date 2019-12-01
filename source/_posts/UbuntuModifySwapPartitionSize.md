@@ -28,7 +28,7 @@ photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic095.jpg
 官方的建议：
 
 | Amount of RAM in the system | Recommended swap space     | Recommended swap space if allowing for hibernation |
-| --------------------------- | -------------------------- | -------------------------------------------------- |
+| :---------------------------: | :--------------------------: | :--------------------------------------------------: |
 | ⩽ 2GB                       | 2 times the amount of RAM  | 3 times the amount of RAM                          |
 | \> 2GB – 8GB                | Equal to the amount of RAM | 2 times the amount of RAM                          |
 | \> 8GB – 64GB               | At least 4 GB              | 1.5 times the amount of RAM                        |
@@ -39,7 +39,7 @@ photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic095.jpg
 以下是Ubuntu的建议：
 
 | RAM(GB) | No hibernation | With Hibernation | Maximum |
-| ------- | -------------- | ---------------- | ------- |
+| :-------: | :--------------: | :----------------: | :-------: |
 | 1       | 1              | 2                | 2       |
 | 2       | 1              | 3                | 4       |
 | 3       | 2              | 5                | 6       |

@@ -30,12 +30,15 @@ photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic027.jpg
 在 http://mirrors.aliyun.com/deepin/pool/non-free/d/ 中下载想要的容器，点击deb安装即可。以下为推荐容器:
 
 >QQ：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/
-TIM：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/
-QQ轻聊版：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im.light/
-微信：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/
-Foxmail：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.foxmail/
-百度网盘：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/
-360压缩：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.cn.360.yasuo
+>TIM：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/
+>QQ轻聊版：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im.light/
+>微信：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/
+>
+>微信出现小黑框解决办法：`sudo chown -R user:user /opt/deepinwine/apps/Deepin-WeChat`
+>
+>Foxmail：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.foxmail/
+>百度网盘：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/
+>360压缩：http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.cn.360.yasuo
 
 进入相关下载页面，选择deb文件，下载下来
 

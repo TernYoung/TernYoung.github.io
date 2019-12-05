@@ -70,7 +70,24 @@ sudo mkswap swapfile #把生成的文件转换成 swap 文件
 swapon swapfile #挂载 swap 文件,挂载后可再次查看 free -m
 ```
 
-### 3、减少 swap 分区大小
+### 3、重启后查看swap分区，发现又变回去了
+
+重新激活swap分区 `sudo swapon /swap/swapfile`
+
+将其写入 /etc/fstab 文件
+
+```shell
+sudo nano /etc/fstab
+
+#增加以下两行：
+
+(add swap space on /swap/swapfile)
+ /swap/swapfile                          /swap           swap    defaults        0       0
+```
+
+关机重启确认swap大小
+
+### 4、减少 swap 分区大小
 
 ```shell
 sudo swapoff swapfile # 进入swap文件目录，卸载 swap 文件，卸载后可以删除，这样就减小了

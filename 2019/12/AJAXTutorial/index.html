@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">AJAX教程 | CPUTern</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "CPUTern";
+  mashiro_option.author_name = "Tern";
+  mashiro_option.site_url = "www.cputern.top";
+  mashiro_option.v_appId = "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz";
+  mashiro_option.v_appKey = "pwG2i33AWjwOOQnEPqLwuW62";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic001.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic002.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic003.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic028.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic005.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic007.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic008.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic035.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic010.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic022.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8ed631e35fec02d0275a0fec8cd93734";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="www.cputern.top">
+          <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Shit Happens But Life Goes On</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/TernYoung" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/weChat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">CPU</span>
+            <span class="shironeko">Tern</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic025.jpg);" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic025.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      AJAX教程</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.cputern.top">
+            <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png">
+          </a>
+        </span>
+        <span>
+          <a href="www.cputern.top">Tern</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-12-1<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="AJAX教程"><a href="#AJAX教程" class="headerlink" title="AJAX教程"></a>AJAX教程</h1><blockquote>
+<p>阅读本教程，您需要有以下基础：</p>
+<ul>
+<li>HTML 和 CSS 基础</li>
+<li>JavaScript 基础</li>
+</ul>
+</blockquote>
+<h2 id="一、AJAX简介"><a href="#一、AJAX简介" class="headerlink" title="一、AJAX简介"></a>一、AJAX简介</h2><blockquote>
+<p>AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
+<p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。</p>
+<p>AJAX 不是新的编程语言，而是一种使用现有标准的新方法。</p>
+<p>AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。</p>
+<p>AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。</p>
+<p>传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。</p>
+<p>而使用 AJAX 的网页，只需要局部更新。</p>
+<p>有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。</p>
+<p>AJAX是基于现有的Internet标准，并且联合使用它们：</p>
+<ul>
+<li>XMLHttpRequest 对象 (异步的与服务器交换数据)</li>
+<li>JavaScript/DOM (信息显示/交互)</li>
+<li>CSS (给数据定义样式)</li>
+<li>XML (作为转换数据的格式)</li>
+</ul>
+<p>Tips:  AJAX应用程序与浏览器和平台无关！</p>
+</blockquote>
+<p>AJAX工作原理：</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2013/09/ajax-yl.png" alt="AJAX工作原理"></p>
+<h2 id="二、AJAX实例"><a href="#二、AJAX实例" class="headerlink" title="二、AJAX实例"></a>二、AJAX实例</h2><h3 id="1-实例"><a href="#1-实例" class="headerlink" title="1. 实例"></a>1. <a href="https://www.runoob.com/try/try.php?filename=tryajax_first" target="_blank" rel="noopener">实例</a></h3><h3 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h3><pre><code class="lang-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;script&gt;
+function loadXMLDoc()
+{
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+        {
+            document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/ajax_info.txt&quot;,true);
+    xmlhttp.send();
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;myDiv&quot;&gt;&lt;h2&gt;使用 AJAX 修改该文本内容&lt;/h2&gt;&lt;/div&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;loadXMLDoc()&quot;&gt;修改内容&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="3-解析"><a href="#3-解析" class="headerlink" title="3. 解析"></a>3. 解析</h3><p>上面的 AJAX 应用程序包含一个 div 和一个按钮。</p>
+<p>div 部分用于显示来自服务器的信息。当按钮被点击时，它负责调用名为 loadXMLDoc() 的函数：</p>
+<pre><code class="lang-html">&lt;div id=&quot;myDiv&quot;&gt;&lt;h2&gt;使用 AJAX 修改该文本内容&lt;/h2&gt;&lt;/div&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;loadXMLDoc()&quot;&gt;修改内容&lt;/button&gt;
+</code></pre>
+<p>接下来，在页面的 head 部分添加一个  <code>&lt;script&gt;</code> 标签。该标签中包含了这个 loadXMLDoc() 函数： </p>
+<pre><code class="lang-html">&lt;head&gt;
+&lt;script&gt;
+function loadXMLDoc()
+{
+    .... AJAX 脚本执行 ...
+}
+&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<h2 id="三、创建-XMLHttpRequest-对象"><a href="#三、创建-XMLHttpRequest-对象" class="headerlink" title="三、创建 XMLHttpRequest 对象"></a>三、创建 <code>XMLHttpRequest</code> 对象</h2><h3 id="1-XMLHttpRequest-是-AJAX-的基础。"><a href="#1-XMLHttpRequest-是-AJAX-的基础。" class="headerlink" title="1. XMLHttpRequest 是 AJAX 的基础。"></a>1. <code>XMLHttpRequest</code> 是 AJAX 的基础。</h3><blockquote>
+<p>XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+</blockquote>
+<h3 id="2-XMLHttpRequest-对象"><a href="#2-XMLHttpRequest-对象" class="headerlink" title="2.  XMLHttpRequest 对象"></a>2.  <code>XMLHttpRequest</code> 对象</h3><blockquote>
+<p>所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。</p>
+</blockquote>
+<p>语法：</p>
+<p><code>var xmlhttp = new XMLHttpRequest();</code></p>
+<p>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：</p>
+<p><code>var xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</code></p>
+<p>为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：</p>
+<pre><code class="lang-javascript">var xmlhttp;
+if (window.XMLHttpRequest)
+{
+    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    xmlhttp=new XMLHttpRequest();
+}
+else
+{
+    // IE6, IE5 浏览器执行代码
+    xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+}
+</code></pre>
+<h2 id="四、向服务器发送请求"><a href="#四、向服务器发送请求" class="headerlink" title="　四、向服务器发送请求"></a>　四、向服务器发送请求</h2><blockquote>
+<p>XMLHttpRequest 对象用于和服务器交换数据。</p>
+</blockquote>
+<p>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：</p>
+<pre><code class="lang-javascript">xmlhttp.open(&quot;GET&quot;,&quot;ajax_info.txt&quot;,true);
+xmlhttp.send();
+</code></pre>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open(<em>method</em>,<em>url</em>,<em>async</em>)</td>
+<td>规定请求的类型、URL 以及是否异步处理请求。<em>method</em>：请求的类型；GET 或 POST；<em>url</em>：文件在服务器上的位置；<em>async</em>：true（异步）或 false（同步）；</td>
+</tr>
+<tr>
+<td>send(<em>string</em>)</td>
+<td>将请求发送到服务器。<em>string</em>：仅用于 POST 请求</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="GET-or-POST"><a href="#GET-or-POST" class="headerlink" title="GET or POST?"></a>GET or POST?</h3><p>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。然而，在以下情况中，请使用 POST 请求：</p>
+<ul>
+<li>无法使用缓存文件（更新服务器上的文件或数据库）</li>
+<li>向服务器发送大量数据（POST 没有数据量限制）</li>
+<li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</li>
+</ul>
+<h3 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h3><p><a href="https://www.runoob.com/try/try.php?filename=tryajax_get" target="_blank" rel="noopener">一个简单的 GET 请求1</a></p>
+<pre><code class="lang-javascript">xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/demo_get.php&quot;,true);
+xmlhttp.send();
+</code></pre>
+<p>在上面的例子中，您可能得到的是缓存的结果。为了避免这种情况，请向 URL 添加一个唯一的 ID：</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_get_unique" target="_blank" rel="noopener">一个简单的 GET 请求2</a></p>
+<pre><code class="lang-javascript">xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/demo_get.php?t=&quot; + Math.random(),true);
+xmlhttp.send();
+</code></pre>
+<p>如果您希望通过 GET 方法发送信息，请向 URL 添加信息：</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_get2" target="_blank" rel="noopener">一个简单的 GET 请求3</a></p>
+<pre><code class="lang-javascript">xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/demo_get2.php?fname=Henry&amp;lname=Ford&quot;,true);
+xmlhttp.send();
+</code></pre>
+<h3 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h3><p><a href="https://www.runoob.com/try/try.php?filename=tryajax_post" target="_blank" rel="noopener">一个简单 POST 请求1</a></p>
+<pre><code class="lang-javascript">xmlhttp.open(&quot;POST&quot;,&quot;/try/ajax/demo_post.php&quot;,true);
+xmlhttp.send();
+</code></pre>
+<p>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_post2" target="_blank" rel="noopener">一个简单 POST 请求2</a></p>
+<pre><code class="lang-javascript">xmlhttp.open(&quot;POST&quot;,&quot;/try/ajax/demo_post2.php&quot;,true);
+xmlhttp.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);
+xmlhttp.send(&quot;fname=Henry&amp;lname=Ford&quot;);
+</code></pre>
+<p><code>setRequestHeader(*header,value*)</code> : 向请求添加 HTTP 头。<em>header</em>: 规定头的名称,<em>value</em>: 规定头的值</p>
+<h3 id="URL-服务器上的文件"><a href="#URL-服务器上的文件" class="headerlink" title="URL-服务器上的文件"></a>URL-服务器上的文件</h3><p>open() 方法的 <em>url</em> 参数是服务器上文件的地址：<code>xmlhttp.open(&quot;GET&quot;,&quot;ajax_test.html&quot;,true);</code></p>
+<p>该文件可以是任何类型的文件，比如 .txt 和 .xml，或者服务器脚本文件，比如 .asp 和 .php （在传回响应之前，能够在服务器上执行任务）。</p>
+<h3 id="异步-True-or-False"><a href="#异步-True-or-False" class="headerlink" title="异步 - True or False"></a>异步 - True or False</h3><p>XMLHttpRequest 对象如果要用于 AJAX 的话，其 open() 方法的 async 参数必须设置为 true：<code>xmlhttp.open(&quot;GET&quot;,&quot;ajax_test.html&quot;,true);</code></p>
+<p>对于 web 开发人员来说，发送异步请求是一个巨大的进步。很多在服务器执行的任务都相当费时。AJAX 出现之前，这可能会引起应用程序挂起或停止。</p>
+<p>通过 AJAX，JavaScript 无需等待服务器的响应，而是：</p>
+<ul>
+<li>在等待服务器响应时执行其他脚本</li>
+<li>当响应就绪后对响应进行处理</li>
+</ul>
+<p>当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_first" target="_blank" rel="noopener">实例</a></p>
+<pre><code class="lang-javascript">xmlhttp.onreadystatechange=function()
+{
+    if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+    {
+        document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+    }
+}
+xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/ajax_info.txt&quot;,true);
+xmlhttp.send();
+</code></pre>
+<p>如需使用 async=false，请将 open() 方法中的第三个参数改为 false：</p>
+<p><code>xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</code></p>
+<p>我们不推荐使用 async=false，但是对于一些小型的请求，也是可以的。</p>
+<p>请记住，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。</p>
+<blockquote>
+<p> 注意：**当您使用 async=false 时，请不要编写 onreadystatechange 函数 - 把代码放到 send() 语句后面即可</p>
+</blockquote>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_asyncfalse" target="_blank" rel="noopener">实例</a></p>
+<pre><code class="lang-javascript">xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/ajax_info.txt&quot;,false);
+xmlhttp.send();
+document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+</code></pre>
+<h2 id="五、服务器响应"><a href="#五、服务器响应" class="headerlink" title="五、服务器响应"></a>五、服务器响应</h2><p>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。</p>
+<h3 id="responseText-属性"><a href="#responseText-属性" class="headerlink" title="responseText 属性"></a>responseText 属性</h3><p>如果来自服务器的响应并非 XML，请使用 responseText 属性，responseText 属性返回字符串形式的响应，因此您可以这样使用：</p>
+<p><code>document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</code></p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_first" target="_blank" rel="noopener">尝试一下</a></p>
+<h3 id="responseXML属性"><a href="#responseXML属性" class="headerlink" title="responseXML属性"></a>responseXML属性</h3><p>如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用 responseXML 属性：</p>
+<pre><code class="lang-javascript">//请求 cd_catalog.xml 文件，并解析响应：
+xmlDoc=xmlhttp.responseXML;
+txt=&quot;&quot;;
+x=xmlDoc.getElementsByTagName(&quot;ARTIST&quot;);
+for (i=0;i&lt;x.length;i++)
+{
+    txt=txt + x[i].childNodes[0].nodeValue + &quot;&lt;br&gt;&quot;;
+}
+document.getElementById(&quot;myDiv&quot;).innerHTML=txt;
+</code></pre>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_responsexml" target="_blank" rel="noopener">尝试一下</a></p>
+<h2 id="六、onreadystatechange-事件"><a href="#六、onreadystatechange-事件" class="headerlink" title="六、onreadystatechange 事件"></a>六、<code>onreadystatechange</code> 事件</h2><p>当请求被发送到服务器时，我们需要执行一些基于响应的任务。每当 readyState 改变时，就会触发 onreadystatechange 事件。readyState 属性存有 XMLHttpRequest 的状态信息。下面是 XMLHttpRequest 对象的三个重要的属性：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onreadystatechange</td>
+<td>存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。0：请求未初始化；1: 服务器连接已建立；2: 请求已接收；3: 请求处理中；4: 请求已完成，且响应已就绪</td>
+</tr>
+<tr>
+<td>status</td>
+<td>200: “OK”；404: 未找到页面</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。当 readyState 等于 4 且状态为 200 时，表示响应已就绪：</p>
+<pre><code class="lang-javascript">
+xmlhttp.onreadystatechange=function()
+{
+    if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+    {
+        document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+    }
+}
+//注意： onreadystatechange 事件被触发 4 次（0 - 4）, 分别是： 0-1、1-2、2-3、3-4，对应着 readyState 的每个变化。
+</code></pre>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_first" target="_blank" rel="noopener">尝试一下</a></p>
+<h3 id="使用回调函数"><a href="#使用回调函数" class="headerlink" title="使用回调函数"></a>使用回调函数</h3><p>回调函数是一种以参数形式传递给另一个函数的函数。如果您的网站上存在多个 AJAX 任务，那么您应该为创建 XMLHttpRequest 对象编写一个<em>标准</em>的函数，并为每个 AJAX 任务调用该函数。该函数调用应该包含 URL 以及发生 onreadystatechange 事件时执行的任务（每次调用可能不尽相同）：</p>
+<pre><code class="lang-javascript">function myFunction()
+{
+    loadXMLDoc(&quot;/try/ajax/ajax_info.txt&quot;,function()
+    {
+        if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+        {
+            document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+        }
+    });
+}
+</code></pre>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_callback" target="_blank" rel="noopener">尝试一下</a></p>
+<h2 id="七、ASP-PHP-实例"><a href="#七、ASP-PHP-实例" class="headerlink" title="七、ASP/PHP 实例"></a>七、ASP/PHP 实例</h2><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>AJAX 用于创造动态性更强的应用程序。下面的例子将为您演示当用户在输入框中键入字符时，网页如何与 web 服务器进行通信： 请在下面的输入框中键入字母（A - Z）：<a href="https://www.runoob.com/try/try.php?filename=tryajax_suggest" target="_blank" rel="noopener">尝试一下</a></p>
+<p>当用户在输入框中键入字符时，会执行函数 “showHint()” 。该函数由 “onkeyup” 事件触发：</p>
+<pre><code class="lang-javascript">
+function showHint(str)
+{
+    var xmlhttp;
+    if (str.length==0)
+    { 
+        document.getElementById(&quot;txtHint&quot;).innerHTML=&quot;&quot;;
+        return;
+    }
+    if (window.XMLHttpRequest)
+    {
+        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+        {
+            document.getElementById(&quot;txtHint&quot;).innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/gethint.php?q=&quot;+str,true);
+    xmlhttp.send();
+}
+</code></pre>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>如果输入框为空 <code>str.length==0</code>，则该函数清空 <code>txtHint</code> 占位符的内容，并退出函数。</p>
+<p>如果输入框不为空，<code>showHint()</code> 函数执行以下任务：</p>
+<ul>
+<li>创建 <code>XMLHttpRequest</code> 对象</li>
+<li>当服务器响应就绪时执行函数</li>
+<li>把请求发送到服务器上的文件</li>
+<li>请注意我们向 URL 添加了一个参数 q （带有输入框的内容）</li>
+</ul>
+<h3 id="ASP-和-PHP"><a href="#ASP-和-PHP" class="headerlink" title="ASP 和 PHP"></a>ASP 和 PHP</h3><p>由上面的 JavaScript 调用的服务器页面是 ASP 文件，名为 “gethint.asp”。下面，我们创建了两个版本的服务器文件，一个用 ASP 编写，另一个用 PHP 编写。</p>
+<h4 id="ASP文件"><a href="#ASP文件" class="headerlink" title="ASP文件"></a>ASP文件</h4><p>“gethint.asp” 中的源代码会检查一个名字数组，然后向浏览器返回相应的名字：</p>
+<pre><code class="lang-asp">&lt;%
+response.expires=-1
+dim a(30)
+&#39;Fill up array with names
+a(1)=&quot;Anna&quot;
+a(2)=&quot;Brittany&quot;
+a(3)=&quot;Cinderella&quot;
+a(4)=&quot;Diana&quot;
+a(5)=&quot;Eva&quot;
+a(6)=&quot;Fiona&quot;
+a(7)=&quot;Gunda&quot;
+a(8)=&quot;Hege&quot;
+a(9)=&quot;Inga&quot;
+a(10)=&quot;Johanna&quot;
+a(11)=&quot;Kitty&quot;
+a(12)=&quot;Linda&quot;
+a(13)=&quot;Nina&quot;
+a(14)=&quot;Ophelia&quot;
+a(15)=&quot;Petunia&quot;
+a(16)=&quot;Amanda&quot;
+a(17)=&quot;Raquel&quot;
+a(18)=&quot;Cindy&quot;
+a(19)=&quot;Doris&quot;
+a(20)=&quot;Eve&quot;
+a(21)=&quot;Evita&quot;
+a(22)=&quot;Sunniva&quot;
+a(23)=&quot;Tove&quot;
+a(24)=&quot;Unni&quot;
+a(25)=&quot;Violet&quot;
+a(26)=&quot;Liza&quot;
+a(27)=&quot;Elizabeth&quot;
+a(28)=&quot;Ellen&quot;
+a(29)=&quot;Wenche&quot;
+a(30)=&quot;Vicky&quot;
+
+&#39;get the q parameter from URL
+q=ucase(request.querystring(&quot;q&quot;))
+
+&#39;lookup all hints from array if length of q&gt;0
+if len(q)&gt;0 then
+  hint=&quot;&quot;
+  for i=1 to 30
+    if q=ucase(mid(a(i),1,len(q))) then
+      if hint=&quot;&quot; then
+        hint=a(i)
+      else
+        hint=hint &amp; &quot; , &quot; &amp; a(i)
+      end if
+    end if
+  next
+end if
+
+&#39;Output &quot;no suggestion&quot; if no hint were found
+&#39;or output the correct values
+if hint=&quot;&quot; then
+  response.write(&quot;no suggestion&quot;)
+else
+  response.write(hint)
+end if
+%&gt;
+</code></pre>
+<h4 id="PHP文件"><a href="#PHP文件" class="headerlink" title="PHP文件"></a>PHP文件</h4><p>下面的代码用 PHP 编写，与上面的 ASP 代码作用是一样的。</p>
+<pre><code class="lang-php">&lt;?php
+// Fill up array with names
+$a[]=&quot;Anna&quot;;
+$a[]=&quot;Brittany&quot;;
+$a[]=&quot;Cinderella&quot;;
+$a[]=&quot;Diana&quot;;
+$a[]=&quot;Eva&quot;;
+$a[]=&quot;Fiona&quot;;
+$a[]=&quot;Gunda&quot;;
+$a[]=&quot;Hege&quot;;
+$a[]=&quot;Inga&quot;;
+$a[]=&quot;Johanna&quot;;
+$a[]=&quot;Kitty&quot;;
+$a[]=&quot;Linda&quot;;
+$a[]=&quot;Nina&quot;;
+$a[]=&quot;Ophelia&quot;;
+$a[]=&quot;Petunia&quot;;
+$a[]=&quot;Amanda&quot;;
+$a[]=&quot;Raquel&quot;;
+$a[]=&quot;Cindy&quot;;
+$a[]=&quot;Doris&quot;;
+$a[]=&quot;Eve&quot;;
+$a[]=&quot;Evita&quot;;
+$a[]=&quot;Sunniva&quot;;
+$a[]=&quot;Tove&quot;;
+$a[]=&quot;Unni&quot;;
+$a[]=&quot;Violet&quot;;
+$a[]=&quot;Liza&quot;;
+$a[]=&quot;Elizabeth&quot;;
+$a[]=&quot;Ellen&quot;;
+$a[]=&quot;Wenche&quot;;
+$a[]=&quot;Vicky&quot;;
+
+//get the q parameter from URL
+$q=$_GET[&quot;q&quot;];
+
+//lookup all hints from array if length of q&gt;0
+if (strlen($q) &gt; 0)
+{
+  $hint=&quot;&quot;;
+  for($i=0; $i&lt;count($a); $i++)
+  {
+    if (strtolower($q)==strtolower(substr($a[$i],0,strlen($q))))
+    {
+      if ($hint==&quot;&quot;)
+      {
+        $hint=$a[$i];
+      }
+      else
+      {
+        $hint=$hint.&quot; , &quot;.$a[$i];
+      }
+    }
+  }
+}
+
+// Set output to &quot;no suggestion&quot; if no hint were found
+// or to the correct values
+if ($hint == &quot;&quot;)
+{
+  $response=&quot;no suggestion&quot;;
+}
+else
+{
+  $response=$hint;
+}
+
+//output the response
+echo $response;
+?&gt;
+</code></pre>
+<h2 id="八、数据库实例"><a href="#八、数据库实例" class="headerlink" title="八、数据库实例"></a>八、数据库实例</h2><h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>下面的例子将演示网页如何通过 AJAX 从数据库读取信息： 请在下拉列表中选择一个客户：</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_database" target="_blank" rel="noopener">尝试一下</a></p>
+<pre><code class="lang-javascript">//当用户在下拉列表中选择某个客户时，会执行名为 &quot;showCustomer()&quot; 的函数。该函数由 &quot;onchange&quot; 事件触发：
+function showCustomer(str)
+{
+  var xmlhttp;    
+  if (str==&quot;&quot;)
+  {
+    document.getElementById(&quot;txtHint&quot;).innerHTML=&quot;&quot;;
+    return;
+  }
+  if (window.XMLHttpRequest)
+  {
+    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {
+    // IE6, IE5 浏览器执行代码
+    xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)
+    {
+      document.getElementById(&quot;txtHint&quot;).innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open(&quot;GET&quot;,&quot;/try/ajax/getcustomer.php?q=&quot;+str,true);
+  xmlhttp.send();
+}
+</code></pre>
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="　解析"></a>　解析</h3><p>showCustomer() 函数执行以下任务：</p>
+<ul>
+<li>检查是否已选择某个客户</li>
+<li>创建 XMLHttpRequest 对象</li>
+<li>当服务器响应就绪时执行所创建的函数</li>
+<li>把请求发送到服务器上的文件</li>
+<li>请注意我们向 URL 添加了一个参数 q （带有输入域中的内容）</li>
+</ul>
+<p>由上面的 JavaScript 调用的服务器页面是 PHP 文件，名为 “getcustomer.php”。用 PHP 编写服务器文件也很容易，或者用其他服务器语言。请看<a href="https://www.runoob.com/php/php-ajax-database.html" target="_blank" rel="noopener">用 PHP 编写的相应的例子</a>。”getcustomer.php” 中的源代码负责对数据库进行查询，然后用 HTML 表格返回结果：</p>
+<pre><code class="lang-html">&lt;%
+response.expires=-1
+sql=&quot;SELECT * FROM CUSTOMERS WHERE CUSTOMERID=&quot;
+sql=sql &amp; &quot;&#39;&quot; &amp; request.querystring(&quot;q&quot;) &amp; &quot;&#39;&quot;
+
+set conn=Server.CreateObject(&quot;ADODB.Connection&quot;)
+conn.Provider=&quot;Microsoft.Jet.OLEDB.4.0&quot;
+conn.Open(Server.Mappath(&quot;/db/northwind.mdb&quot;))
+set rs=Server.CreateObject(&quot;ADODB.recordset&quot;)
+rs.Open sql,conn
+
+response.write(&quot;&lt;table&gt;&quot;)
+do until rs.EOF
+  for each x in rs.Fields
+    response.write(&quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;&quot; &amp; x.name &amp; &quot;&lt;/b&gt;&lt;/td&gt;&quot;)
+    response.write(&quot;&lt;td&gt;&quot; &amp; x.value &amp; &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)
+  next
+  rs.MoveNext
+loop
+response.write(&quot;&lt;/table&gt;&quot;)
+%&gt;
+</code></pre>
+<h2 id="九、XML实例"><a href="#九、XML实例" class="headerlink" title="九、XML实例"></a>九、XML实例</h2><h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>AJAX 可用来与 XML 文件进行交互式通信。下面的例子将演示网页如何使用 AJAX 来读取来自 XML 文件的信息：<a href="https://www.runoob.com/try/try.php?filename=tryajax_xml2" target="_blank" rel="noopener">尝试一下</a></p>
+<pre><code class="lang-javascript">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;style&gt;
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;XMLHttpRequest 对象&lt;/h1&gt;
+
+&lt;button type=&quot;button&quot; onclick=&quot;loadXMLDoc()&quot;&gt;获取我收藏的 CD&lt;/button&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;table id=&quot;demo&quot;&gt;&lt;/table&gt;
+
+&lt;script&gt;
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 &amp;&amp; this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open(&quot;GET&quot;, &quot;cd_catalog.xml&quot;, true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table=&quot;&lt;tr&gt;&lt;th&gt;Artist&lt;/th&gt;&lt;th&gt;Title&lt;/th&gt;&lt;/tr&gt;&quot;;
+  var x = xmlDoc.getElementsByTagName(&quot;CD&quot;);
+  for (i = 0; i &lt;x.length; i++) {
+    table += &quot;&lt;tr&gt;&lt;td&gt;&quot; +
+    x[i].getElementsByTagName(&quot;ARTIST&quot;)[0].childNodes[0].nodeValue +
+    &quot;&lt;/td&gt;&lt;td&gt;&quot; +
+    x[i].getElementsByTagName(&quot;TITLE&quot;)[0].childNodes[0].nodeValue +
+    &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  }
+  document.getElementById(&quot;demo&quot;).innerHTML = table;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h3><p>当用户点击上面的”获取我收藏的 CD”这个按钮，就会执行 loadXMLDoc() 函数。</p>
+<p>loadXMLDoc() 函数创建 XMLHttpRequest 对象，添加当服务器响应就绪时执行的函数，并将请求发送到服务器。</p>
+<p>当服务器响应就绪时，会构建一个 HTML 表格，从 XML 文件中提取节点（元素），最后使用 XML 数据的 填充 id=”demo”  的表格元素： </p>
+<pre><code class="lang-javascript">//异步加载 XML 文档
+
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 &amp;&amp; this.status == 200) {
+    myFunction(this);
+    }
+  };
+  xhttp.open(&quot;GET&quot;, &quot;cd_catalog.xml&quot;, true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table=&quot;&lt;tr&gt;&lt;th&gt;Artist&lt;/th&gt;&lt;th&gt;Title&lt;/th&gt;&lt;/tr&gt;&quot;;
+  var x = xmlDoc.getElementsByTagName(&quot;CD&quot;);
+  for (i = 0; i &lt;x.length; i++) { 
+    table += &quot;&lt;tr&gt;&lt;td&gt;&quot; +
+    x[i].getElementsByTagName(&quot;ARTIST&quot;)[0].childNodes[0].nodeValue +
+    &quot;&lt;/td&gt;&lt;td&gt;&quot; +
+    x[i].getElementsByTagName(&quot;TITLE&quot;)[0].childNodes[0].nodeValue +
+    &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  }
+  document.getElementById(&quot;demo&quot;).innerHTML = table;
+}
+</code></pre>
+<p>上面这个例子中使用的服务器页面实际上是一个名为 “<a href="https://www.runoob.com/try/demo_source/cd_catalog.xml" target="_blank" rel="noopener">cd_catalog.xml</a>“  XML 文件。</p>
+<h2 id="AJAX实例"><a href="#AJAX实例" class="headerlink" title="AJAX实例"></a>AJAX实例</h2><p><a href="https://www.runoob.com/try/try.php?filename=tryajax_first" target="_blank" rel="noopener">一个简单的AJAX实例</a></p>
+<p>创建一个简单的XMLHttpRequest，从一个TXT文件中返回数据。</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_xml" target="_blank" rel="noopener">用AJAX加载 XML 文件</a></p>
+<p>创建一个简单的XMLHttpRequest，从一个XML文件中返回数据。</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_header" target="_blank" rel="noopener">用AJAX进行一次 HEAD 请求</a></p>
+<p>检索资源（文件）的头信息。</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_lastmodified" target="_blank" rel="noopener">用AJAX进行一次指定的 HEAD 请求</a></p>
+<p>检索资源（文件）的指定头信息。</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_suggest" target="_blank" rel="noopener">用AJAX从ASP 文件返回数据</a></p>
+<p>当用户在文本框内键入字符时网页如何与Web服务器进行通信</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_database" target="_blank" rel="noopener">用AJAX从数据库返回数据</a></p>
+<p>用AJAX网页如何获取数据库中的信息</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_xml2" target="_blank" rel="noopener">用AJAX从XML 文件返回数据</a></p>
+<p>创建一个XMLHttpRequest从XML文件中检索数据并显示在一个HTML表格中。</p>
+<p><a href="https://www.runoob.com/try/try.php?filename=tryajax_callback" target="_blank" rel="noopener">用callback函数的AJAX实例</a></p>
+<p>用一个callback函数创建一个XMLHttpRequest，并从一个TXT文件中检索数据。</p>
+<h2 id="AJAX-应用"><a href="#AJAX-应用" class="headerlink" title="AJAX 应用"></a>AJAX 应用</h2><ul>
+<li>运用XHTML+CSS来表达资讯；</li>
+<li>运用JavaScript操作DOM（Document Object Model）来执行动态效果；</li>
+<li>运用XML和XSLT操作资料;</li>
+<li>运用XMLHttpRequest或新的Fetch API与网页服务器进行异步资料交换；</li>
+<li>注意：AJAX与Flash、Silverlight和Java Applet等RIA技术是有区分的。</li>
+</ul>
+<p>参考:</p>
+<p><a href="https://www.runoob.com/ajax/ajax-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/wechatpay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/12/ServletTutorial/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic074.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic074.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Servlet教程</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/12/UbuntuModifySwapPartitionSize/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic095.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic095.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Ubuntu修改swap分区大小</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        notify: true, // 邮件提醒!!!
+        verify: true, // 验证码
+        appId: "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz",
+        appKey: "pwG2i33AWjwOOQnEPqLwuW62",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.cputern.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png" itemprop="image" alt="Tern" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.cputern.top" itemprop="url" rel="author">Tern</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 CPUTern<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by GitHub&Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">CPUTern</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/TernYoung" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=&site=975429539&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人链
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2690960268"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

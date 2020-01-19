@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cputern.top/"/>
-  <updated>2019-12-01T10:32:25.887Z</updated>
+  <updated>2019-12-05T14:04:58.576Z</updated>
   <id>http://www.cputern.top/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Servlet教程</title>
+    <link href="http://www.cputern.top/2019/12/ServletTutorial/"/>
+    <id>http://www.cputern.top/2019/12/ServletTutorial/</id>
+    <published>2019-12-02T11:02:20.000Z</published>
+    <updated>2019-12-05T14:04:58.576Z</updated>
+    
+    <summary type="html">
+    
+      Servlet教程
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Web开发" scheme="http://www.cputern.top/tags/Web%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Java" scheme="http://www.cputern.top/tags/Java/"/>
+    
+      <category term="Jsp" scheme="http://www.cputern.top/tags/Jsp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AJAX教程</title>
+    <link href="http://www.cputern.top/2019/12/AJAXTutorial/"/>
+    <id>http://www.cputern.top/2019/12/AJAXTutorial/</id>
+    <published>2019-12-01T12:02:51.000Z</published>
+    <updated>2019-12-05T14:04:58.574Z</updated>
+    
+    <summary type="html">
+    
+      AJAX教程
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://www.cputern.top/tags/JavaScript/"/>
+    
+      <category term="XML" scheme="http://www.cputern.top/tags/XML/"/>
+    
+      <category term="Web开发" scheme="http://www.cputern.top/tags/Web%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu修改swap分区大小</title>
     <link href="http://www.cputern.top/2019/12/UbuntuModifySwapPartitionSize/"/>
     <id>http://www.cputern.top/2019/12/UbuntuModifySwapPartitionSize/</id>
     <published>2019-12-01T07:27:23.000Z</published>
-    <updated>2019-12-01T10:32:25.887Z</updated>
+    <updated>2019-12-05T14:04:58.577Z</updated>
     
     <summary type="html">
     
@@ -87,7 +135,7 @@
     <link href="http://www.cputern.top/2019/11/QQOnLinux/"/>
     <id>http://www.cputern.top/2019/11/QQOnLinux/</id>
     <published>2019-11-27T12:35:36.000Z</published>
-    <updated>2019-11-27T15:08:36.706Z</updated>
+    <updated>2019-12-05T14:04:58.575Z</updated>
     
     <summary type="html">
     
@@ -98,9 +146,9 @@
       <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Ubuntu" scheme="http://www.cputern.top/tags/Ubuntu/"/>
-    
       <category term="Linux" scheme="http://www.cputern.top/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="http://www.cputern.top/tags/Ubuntu/"/>
     
       <category term="QQ" scheme="http://www.cputern.top/tags/QQ/"/>
     
@@ -354,9 +402,9 @@
       <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="素数" scheme="http://www.cputern.top/tags/%E7%B4%A0%E6%95%B0/"/>
-    
       <category term="数论" scheme="http://www.cputern.top/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+      <category term="素数" scheme="http://www.cputern.top/tags/%E7%B4%A0%E6%95%B0/"/>
     
   </entry>
   
@@ -401,50 +449,6 @@
       <category term="百度统计" scheme="http://www.cputern.top/tags/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1/"/>
     
       <category term="Livere" scheme="http://www.cputern.top/tags/Livere/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何在hexo中使用LaTeX数学公式</title>
-    <link href="http://www.cputern.top/2019/07/hexoWith%5BLaTeX%5DMathFormula/"/>
-    <id>http://www.cputern.top/2019/07/hexoWith[LaTeX]MathFormula/</id>
-    <published>2019-07-16T10:55:34.000Z</published>
-    <updated>2019-11-26T15:49:15.616Z</updated>
-    
-    <summary type="html">
-    
-      hexo中使用LaTeX数学公式
-    
-    </summary>
-    
-      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="hexo" scheme="http://www.cputern.top/tags/hexo/"/>
-    
-      <category term="LaTeX" scheme="http://www.cputern.top/tags/LaTeX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快速幂和矩阵快速幂</title>
-    <link href="http://www.cputern.top/2019/07/fastPowerAndMatrixFastPower/"/>
-    <id>http://www.cputern.top/2019/07/fastPowerAndMatrixFastPower/</id>
-    <published>2019-07-16T05:27:23.000Z</published>
-    <updated>2019-11-28T14:15:19.687Z</updated>
-    
-    <summary type="html">
-    
-      快速幂和矩阵快速幂
-    
-    </summary>
-    
-      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="快速幂" scheme="http://www.cputern.top/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
-    
-      <category term="矩阵快速幂" scheme="http://www.cputern.top/tags/%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
     
   </entry>
   

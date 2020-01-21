@@ -38,10 +38,10 @@
   
   <entry>
     <title>概率统计期末总结</title>
-    <link href="http://www.cputern.top/2020/01/SummaryOf%20ProbabilityStatistics/"/>
-    <id>http://www.cputern.top/2020/01/SummaryOf ProbabilityStatistics/</id>
+    <link href="http://www.cputern.top/2020/01/SummaryOfProbabilityStatistics/"/>
+    <id>http://www.cputern.top/2020/01/SummaryOfProbabilityStatistics/</id>
     <published>2020-01-04T13:59:36.000Z</published>
-    <updated>2020-01-21T09:09:16.306Z</updated>
+    <updated>2020-01-21T09:19:12.196Z</updated>
     
     <summary type="html">
     
@@ -442,9 +442,9 @@
       <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="素数" scheme="http://www.cputern.top/tags/%E7%B4%A0%E6%95%B0/"/>
-    
       <category term="数论" scheme="http://www.cputern.top/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+      <category term="素数" scheme="http://www.cputern.top/tags/%E7%B4%A0%E6%95%B0/"/>
     
   </entry>
   

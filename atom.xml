@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cputern.top/"/>
-  <updated>2019-12-05T14:04:58.576Z</updated>
+  <updated>2020-01-21T09:12:05.261Z</updated>
   <id>http://www.cputern.top/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库期末总结</title>
+    <link href="http://www.cputern.top/2020/01/DatabasePeriodEndSummary/"/>
+    <id>http://www.cputern.top/2020/01/DatabasePeriodEndSummary/</id>
+    <published>2020-01-07T13:00:36.000Z</published>
+    <updated>2020-01-21T09:12:05.261Z</updated>
+    
+    <summary type="html">
+    
+      数据库期末总结
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="数据库" scheme="http://www.cputern.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>概率统计期末总结</title>
+    <link href="http://www.cputern.top/2020/01/SummaryOf%20ProbabilityStatistics/"/>
+    <id>http://www.cputern.top/2020/01/SummaryOf ProbabilityStatistics/</id>
+    <published>2020-01-04T13:59:36.000Z</published>
+    <updated>2020-01-21T09:09:16.306Z</updated>
+    
+    <summary type="html">
+    
+      描述
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="概率统计" scheme="http://www.cputern.top/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Servlet教程</title>
@@ -402,53 +442,9 @@
       <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="数论" scheme="http://www.cputern.top/tags/%E6%95%B0%E8%AE%BA/"/>
-    
       <category term="素数" scheme="http://www.cputern.top/tags/%E7%B4%A0%E6%95%B0/"/>
     
-  </entry>
-  
-  <entry>
-    <title>线段树模板</title>
-    <link href="http://www.cputern.top/2019/07/lineSegmentTreeTemplate/"/>
-    <id>http://www.cputern.top/2019/07/lineSegmentTreeTemplate/</id>
-    <published>2019-07-18T14:26:23.000Z</published>
-    <updated>2019-11-26T15:49:24.237Z</updated>
-    
-    <summary type="html">
-    
-      线段树模板
-    
-    </summary>
-    
-      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="线段树" scheme="http://www.cputern.top/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo添加百度统计和Livere(来必应)评论插件</title>
-    <link href="http://www.cputern.top/2019/07/hexoAddBaiduStatisticsAndLivereCommentPlugin/"/>
-    <id>http://www.cputern.top/2019/07/hexoAddBaiduStatisticsAndLivereCommentPlugin/</id>
-    <published>2019-07-17T08:53:20.000Z</published>
-    <updated>2019-11-26T15:54:00.548Z</updated>
-    
-    <summary type="html">
-    
-      hexo添加百度统计和Livere(来必应)评论插件
-    
-    </summary>
-    
-      <category term="技术" scheme="http://www.cputern.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="hexo" scheme="http://www.cputern.top/tags/hexo/"/>
-    
-      <category term="百度统计" scheme="http://www.cputern.top/tags/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1/"/>
-    
-      <category term="Livere" scheme="http://www.cputern.top/tags/Livere/"/>
+      <category term="数论" scheme="http://www.cputern.top/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   

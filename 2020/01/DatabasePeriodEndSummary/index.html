@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">数据库期末总结 | CPUTern</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "CPUTern";
+  mashiro_option.author_name = "Tern";
+  mashiro_option.site_url = "www.cputern.top";
+  mashiro_option.v_appId = "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz";
+  mashiro_option.v_appKey = "pwG2i33AWjwOOQnEPqLwuW62";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic001.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic002.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic003.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic028.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic005.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic007.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic008.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic035.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic010.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic015.png,https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/largePic/png/pic022.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8ed631e35fec02d0275a0fec8cd93734";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="www.cputern.top">
+          <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>沙雕主义先驱</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/TernYoung" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/weChat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">CPU</span>
+            <span class="shironeko">Tern</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic023.jpg);" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic023.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      数据库期末总结</h1>
+      <p class="entry-census">
+        <span>
+          <a href="cputern.top">
+            <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png">
+          </a>
+        </span>
+        <span>
+          <a href="cputern.top">Tern</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-1-7<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="2019数据库原理考试大纲"><a href="#2019数据库原理考试大纲" class="headerlink" title="2019数据库原理考试大纲"></a>2019数据库原理考试大纲</h2><h3 id="一、简答题-本题共4小题-每小题5分-共20分"><a href="#一、简答题-本题共4小题-每小题5分-共20分" class="headerlink" title="一、简答题(本题共4小题,每小题5分,共20分)"></a>一、简答题(本题共4小题,每小题5分,共20分)</h3><p>主要考核第一童到第七章的基本概念</p>
+<h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h4 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h4><h3 id="二、SQL操作题-每小题3分-共24分"><a href="#二、SQL操作题-每小题3分-共24分" class="headerlink" title="二、SQL操作题(每小题3分,共24分)"></a>二、SQL操作题(每小题3分,共24分)</h3><p>主要考核学生对于给出的若干关系模式,用SQL语句表达式作答,主要操作包括,增、删、改和创建基本表和视图。</p>
+<h4 id="1-创建基本表"><a href="#1-创建基本表" class="headerlink" title="1.创建基本表"></a>1.创建基本表</h4><pre><code class="lang-sql">CREATE TABLE Student(
+    Sno CHAR(9) PRIMARY KEY, 
+    Sname CHAR(20) UNIQUE,
+    Ssex CHAR(2),
+    Sage SMALLINT,
+    Sdept CHAR(20)
+);
+</code></pre>
+<pre><code class="lang-sql">CREATE TABLE Course(
+    Cno CHAR(4) PRIMARY KEY,
+    Cname CHAR(40) NOT NULL,
+    Cpno CHAR(4),
+    Ccredit SMALLINT,
+    FOREIGN KEY(Cpno) REFERENCES Course(Cno)
+);
+</code></pre>
+<pre><code class="lang-sql">CREATE TABLE SC(
+    Sno CHAR(9), 
+    Cno CHAR(4),
+    Grade SMALLINT,
+    PRIMARY KEY(Sno,Cno),
+    FOREIGN KEY(Sno) REFERENCES Student(Sno),
+    FOREIGN KEY(Cno) REFERENCES Course(Cno)
+);
+</code></pre>
+<pre><code class="lang-sql">CREATE TABLE tablename 
+( 
+ column datatype [NULL|NOT NULL] [列级完整性约束], 
+ column datatype [NULL|NOT NULL] [CONSTRAINTS], 
+ 表级完整性约束
+);
+</code></pre>
+<h4 id="2-改"><a href="#2-改" class="headerlink" title="2.改"></a>2.改</h4><pre><code class="lang-sql">UPDATE tablename 
+SET columname = value, ... 
+[WHERE ...];
+</code></pre>
+<h4 id="3-删"><a href="#3-删" class="headerlink" title="3.删"></a>3.删</h4><pre><code class="lang-sql">DELETE FROM tablename 
+[WHERE ...];
+</code></pre>
+<h4 id="4-查"><a href="#4-查" class="headerlink" title="4.查"></a>4.查</h4><pre><code class="lang-sql">SELECT columnname, ... 
+FROM tablename, ... 
+[WHERE ...] 
+[UNION ...] 
+[GROUP BY ...] 
+[HAVING ...] 
+[ORDER BY ...];
+</code></pre>
+<h4 id="5-查"><a href="#5-查" class="headerlink" title="5.查"></a>5.查</h4><h4 id="6-查"><a href="#6-查" class="headerlink" title="6.查"></a>6.查</h4><h4 id="7-增"><a href="#7-增" class="headerlink" title="7.增"></a>7.增</h4><pre><code class="lang-sql">INSERT INTO tablename [(columns, ...)] 
+VALUES(values, ...);
+</code></pre>
+<h4 id="8-创建视图"><a href="#8-创建视图" class="headerlink" title="8.创建视图"></a>8.创建视图</h4><pre><code class="lang-sql">CREATE VIEW viewname AS 
+SELECT columns, ... 
+FROM tables, ... 
+[WHERE ...] 
+[GROUP BY ...] 
+[HAVING ...];
+</code></pre>
+<h3 id="三、证明题-每小题10分-共20分"><a href="#三、证明题-每小题10分-共20分" class="headerlink" title="三、证明题(每小题10分,共20分)"></a>三、证明题(每小题10分,共20分)</h3><p>Armstrong公理系统设关系模式R<u,f>，其中U为属性集，F是U上的一组函数依赖，那么有如下推理规则：</u,f></p>
+<pre><code class="lang-text">    A1自反律：若Y⊆X⊆U，则X→Y为F所蕴涵；
+    A2增广律：若X→Y为F所蕴含，且Z⊆U，则XZ→YZ为F所蕴涵；
+    A3传递律：若X→Y，Y→Z为F所蕴含，则X→Z为F所蕴涵。
+</code></pre>
+<p>根据上面三条推理规则，又可推出下面三条推理规则：</p>
+<pre><code class="lang-text">    合并规则：若X→Y，X→Z，则X→YZ为F所蕴涵；
+    伪传递规则：若X→Y，WY→Z，则XW→Z为F所蕴涵；
+    分解规则：若X→Y，Z⊆Y，则X→Z为F所蕴涵。
+</code></pre>
+<p>引理：$X→A_1A_2…A_k$成立的充分必要条件是$X→A_i$成立$(i=1,2,…,k)$。</p>
+<h4 id="1-证明-Armstrong公理规则"><a href="#1-证明-Armstrong公理规则" class="headerlink" title="1.证明 Armstrong公理规则"></a>1.证明 Armstrong公理规则</h4><p><strong>A1自反律</strong></p>
+<pre><code class="lang-text">A1自反律：若Y⊆X⊆U，则X→Y为F所蕴含
+证明1
+设Y⊆X⊆U。
+对R&lt;U,F&gt;的任一关系r中的任意两个元组t,s：
+若t[X]=s[X]，由于Y⊆X，则有t[Y]=s[Y]，所以X→Y成立，自反律得证。
+</code></pre>
+<p><strong>A2增广律</strong></p>
+<pre><code class="lang-text">A2增广律：若X→Y为F所蕴含，且Z⊆U，则XZ→YZ为F所蕴含
+证明2
+设X→Y为F所蕴含，且Z⊆U。
+对R&lt;U,F&gt;的任一关系r中的任意两个元组t,s：
+若t[XZ]=s[XZ]，由于X⊆XZ，Z⊆XZ，根据自反律，则有t[X]=s[X]和t[Z]=s[Z]；
+由于X→Y，于是t[Y]=s[Y]，所以t[YZ]=s[YZ]；所以XZ→YZ为F所蕴涵，增广律得证。
+</code></pre>
+<p><strong>A3传递律</strong></p>
+<pre><code class="lang-text">A3传递律：若X→Y，Y→Z为F所蕴涵，则X→Z为F所蕴涵
+证明3
+设X→Y及Y→Z为F所蕴涵。
+对R&lt;U,F&gt;的任一关系r中的任意两个元组t,s：
+若t[X]=s[X]，由于X→Y，有t[Y]=s[Y]；
+再由于Y→Z，有t[Z]=s[Z]，所以X→Z为F所蕴含，传递律得证。
+</code></pre>
+<p><strong>合并规则</strong></p>
+<pre><code class="lang-text">合并规则：若X→Y，X→Z，则X→YZ为F所蕴含
+证明4
+因X→Y ，所以X→XY （增广律 XX→XY即X→XY）
+因X→Z ，所以XY→YZ （增广律）
+因X→XY，XY→YZ
+故X→YZ （传递律）
+</code></pre>
+<p><strong>伪传递规则</strong></p>
+<pre><code class="lang-text">伪传递规则：若X→Y，WY→Z，则XW→Z为F所蕴含
+证明5
+因X→Y ，所以WX→WY （增广律）
+因WY→Z ，所以XW→Z （传递律）
+</code></pre>
+<p><strong>分解规则</strong></p>
+<pre><code class="lang-text">分解规则：若X→Y，Z⊆Y，则X→Z为F所蕴含
+证明6
+因Z⊆Y 　所以Y→Z （自反律）
+因X→Y 所以X→Z （传递律）
+</code></pre>
+<h4 id="2-证明在给定函数依赖集中-逻辑蕴涵了给定的函数依赖"><a href="#2-证明在给定函数依赖集中-逻辑蕴涵了给定的函数依赖" class="headerlink" title="2.证明在给定函数依赖集中,逻辑蕴涵了给定的函数依赖"></a>2.证明在给定函数依赖集中,逻辑蕴涵了给定的函数依赖</h4><pre><code class="lang-text">例1 根据Armstrong公理的A1，A2，A3证明X→Y，X→Z，有X→YZ。
+因为X→Y,  根据A2规则 可知X→XY
+因为X→Z,   根据A2规则 可知XY→YZ
+又根据A3规则 可以得到  X→YZ
+</code></pre>
+<pre><code class="lang-text">例2 根据Armstrong公理的A1，A2，A3证明由X→Y，WY→Z，有XW→Z。
+因为X→Y,  根据A2规则 可知 XW→WY
+因为WY→Z,  根据A3规则 可以得到 XW→YZ
+</code></pre>
+<pre><code class="lang-text">例3 设F={AB→E,AGJ,BE→I,E→G,GI→H}
+试证:F|=AB→GH
+1.已知AB→E,E→G         则:AB→G;传递律
+2.已知AB→E             则:AB→BE;(增广律)
+3.已知BE→I,又AB→BE        则:AB→I(传递律)
+4.由1和3有AB→G,AB→I     则:AB→GI(合成规则)
+5.由4有AB→GI,又GI→H     则:AB→H(传递律)
+6.由1和5有AB→H,AB→G     则AB→GH (合成规则)
+</code></pre>
+<h3 id="四、简单应用题-每小题6分-共24分"><a href="#四、简单应用题-每小题6分-共24分" class="headerlink" title="四、简单应用题(每小题6分,共24分)"></a>四、简单应用题(每小题6分,共24分)</h3><p>本大题共4小题,分别考核学生对于关系数据库理论中的以下综合应用,<br>求①候选关键字,②最小覆盖,③判定给定模式分解是否满足无损连接性和依赖保持性,④判定给定关系模式符合哪种范式条件,并在此基本上分解到3NF或BCNF</p>
+<h5 id="算法6-1-求闭包"><a href="#算法6-1-求闭包" class="headerlink" title="算法6.1 求闭包"></a>算法6.1 求闭包</h5><h4 id="1-①候选关键字（候选码）"><a href="#1-①候选关键字（候选码）" class="headerlink" title="1.①候选关键字（候选码）"></a>1.①候选关键字（候选码）</h4><p>第一步：求最小函数依赖集</p>
+<p>第二步：写出$L,R,N,LR$ </p>
+<p>定理：$L,N$必为任一候选关键字的成员，$R$ 必不是</p>
+<p>第三步：若$X$是$L$类和$N$类组成的属性集,且 $X ≠\varnothing $,则计算$X$的闭包$X^{+}_F$，若$X+F = U$ ,则$X $为关系模式$R$ 的唯一的候选码,算法结束. 若$X+F≠U$ ,转第4 步. 若$X = \varnothing $,转第5 步.</p>
+<p>第四步：将$X$ 依次与$LR$ 中的属性分别组合, 判断该组合属性是否是候选码; 找出所有的候选码后,算法结束.</p>
+<p>第五步：对$LR$ 中的属性及属性组合依次进行判断;找出所有的候选码后,算法结束.</p>
+<h4 id="2-②最小覆盖（最小函数依赖）"><a href="#2-②最小覆盖（最小函数依赖）" class="headerlink" title="2.②最小覆盖（最小函数依赖）"></a>2.②最小覆盖（最小函数依赖）</h4><p>口诀：先拆右非单，依赖依次删，后拆左非单<br>套路：<br>$<br>R=\left( A,B,C \right) ，F=\left\{ A\rightarrow BC,B\rightarrow C,A\rightarrow B,AB\rightarrow C \right\}<br>$</p>
+<p>第一步：先拆右非单<br>即 $A\rightarrow BC\Longrightarrow A\rightarrow B,A\rightarrow C$ ，$F=\left\{ A\rightarrow B,A\rightarrow C,B\rightarrow C,A\rightarrow B\left( \text{重复删除} \right) ,AB\rightarrow C \right\} $</p>
+<p>第二步：依赖依次删<br>即考虑将 $F$ 中各个依赖依次删除,是否还能推出还原,能还原即可删去。</p>
+<ul>
+<li>考虑到有 $A\rightarrow C$ , $AB\rightarrow C$ 中 $B$ 为多余属性，去掉 $AB\rightarrow C$ </li>
+<li>考虑到 $A\rightarrow C$ 可由 $<br>A\rightarrow B,B\rightarrow C<br>$ 导出，去掉 $A\rightarrow C$ </li>
+</ul>
+<p>$F_{min}=\left\{ A\rightarrow B,B\rightarrow C \right\} $ </p>
+<p>第三步：后拆左非单<br>由于此时左侧已经全为单元素,故不用执行此步,若左侧还有非单元素,考虑能否将其拆成单元素</p>
+<h4 id="3-③判定给定模式分解是否满足无损连接性和依赖保持性"><a href="#3-③判定给定模式分解是否满足无损连接性和依赖保持性" class="headerlink" title="3.③判定给定模式分解是否满足无损连接性和依赖保持性"></a>3.③判定给定模式分解是否满足无损连接性和依赖保持性</h4><h5 id="算法6-2判别一个分解是否无损连接"><a href="#算法6-2判别一个分解是否无损连接" class="headerlink" title="算法6.2判别一个分解是否无损连接"></a>算法6.2判别一个分解是否无损连接</h5><p>矩阵法</p>
+<p>第一步：画矩阵，各属性为列，分解为行，初步填表</p>
+<p>第二步：求最小函数依赖</p>
+<p>第三步：根据依赖补充表</p>
+<h5 id="是否依赖保持"><a href="#是否依赖保持" class="headerlink" title="是否依赖保持"></a>是否依赖保持</h5><p>第一步：根据分解拆分依赖</p>
+<p>第二步：验证 $F^+=\left( \bigcup_{i=1}^k{F_i} \right) ^+$</p>
+<h4 id="4-④判定给定关系模式符合哪种范式条件-并在此基本上分解到3NF或BCNF"><a href="#4-④判定给定关系模式符合哪种范式条件-并在此基本上分解到3NF或BCNF" class="headerlink" title="4.④判定给定关系模式符合哪种范式条件,并在此基本上分解到3NF或BCNF"></a>4.④判定给定关系模式符合哪种范式条件,并在此基本上分解到3NF或BCNF</h4><h5 id="3NF分解"><a href="#3NF分解" class="headerlink" title="3NF分解"></a>3NF分解</h5><h5 id="算法6-3-转换为3NF的保持函数依赖的分解"><a href="#算法6-3-转换为3NF的保持函数依赖的分解" class="headerlink" title="算法6.3 转换为3NF的保持函数依赖的分解"></a>算法6.3 转换为3NF的保持函数依赖的分解</h5><p>口诀：保函依赖分解题，先求最小依赖集。依赖两侧未出现，分成子集放一边，剩余依赖变子集。若要连接成无损，再添候选做子集。</p>
+<p>下面通过几道例题讲解口诀： </p>
+<p> <strong>例1</strong>.已知$R\left( A,B,C,D,E \right) ,F=\left\{ A\rightarrow D,E\rightarrow D,D\rightarrow B,BC\rightarrow D,DC\rightarrow A \right\} $求保持函数依赖的3NF分解，和具有无损连接性及保持函数依赖的3NF分解 </p>
+<p>第一步：保函依赖分解题，先求最小依赖集。</p>
+<p> 先求出 $R$ 的最小依赖集，可得$<br>F_{min}=\left\{ A\rightarrow D,E\rightarrow D,D\rightarrow B,BC\rightarrow D,DC\rightarrow A \right\}<br>$ </p>
+<p>第二步：依赖两侧未出现，分成子集放一边。</p>
+<p>首先可以发现没有不出现在两侧的元素不用单独分出一个子集，“剩余依赖变子集”然后我们将各依赖分别划分为子集得到：$<br>\left\{ AD \right\} ,\left\{ ED \right\} ,\left\{ DB \right\} ,\left\{ BCD \right\} ,\left\{ DCA \right\}<br>$ ，即为所求保持函数依赖的3NF分解</p>
+<h5 id="算法6-4-转换为3NF既有无损连接性又保持函数依赖的分解"><a href="#算法6-4-转换为3NF既有无损连接性又保持函数依赖的分解" class="headerlink" title="算法6.4 转换为3NF既有无损连接性又保持函数依赖的分解"></a>算法6.4 转换为3NF既有无损连接性又保持函数依赖的分解</h5><p>第三步：若要连接成无损，再添候选做子集。</p>
+<p>求候选码。候选码为$\{CE\}$。故所求具有无损连接性及保持函数依赖的3NF分解为$\{AD\},\{ED\},\{DB\},\{BCD\},\{DCA\},\{CE\}$ </p>
+<p><strong>例2</strong>.关系模式$R$,有$U=\{A,B,C,D,E,G\},F=\{B\rightarrow G,CE\rightarrow B,C\rightarrow A,CE\rightarrow G,B\rightarrow D,C\rightarrow D\}$，将关系模式分解为3NF且保持函数依赖</p>
+<p>第一步：保函依赖分解题，先求最小依赖集。</p>
+<p>先求出R的最小依赖集，可得 $F_{min}=\{ B\rightarrow G,CE\rightarrow B,C\rightarrow A,B\rightarrow D,C\rightarrow D  \}$</p>
+<p>第二步：依赖两侧未出现，分成子集放一边，剩余依赖变子集。</p>
+<p>首先可以发现没有不出现在两侧的元素，然后我们将各依赖分别划分为子集得$\{BG\}, \{CEB\}, \{CA\}, \{BD\}, \{CD\}$，即为所求保持函数依赖的3NF分解</p>
+<p>第三步：若要连接成无损，再添候选做子集。</p>
+<p>找到R的一个候选码为$\{ACE\}$。故所求具有无损连接性及保持函数依赖的3NF分解为$\{BG\}, \{CEB\}, \{CA\}, \{BD\}, \{CD\},\{ACE\}$ </p>
+<p>(注：范式分解并不唯一，正确即可)</p>
+<h5 id="算法6-5-转换为BCNF的无损连接分解"><a href="#算法6-5-转换为BCNF的无损连接分解" class="headerlink" title="算法6.5 转换为BCNF的无损连接分解"></a>算法6.5 转换为BCNF的无损连接分解</h5><p>法一：</p>
+<p>口诀：先求最小依赖集，候码非码成子集，余下左侧全候码。</p>
+<p>例.关系模式$R$,有$U=\{A,B,C,D,E,G\},F=\{B\rightarrow G,CE\rightarrow B,C\rightarrow A,CE\rightarrow G,B\rightarrow D,C\rightarrow D\}$，将关系模式分解为3NF且保持函数依赖</p>
+<p>第一步：先求最小依赖集。</p>
+<p>最小依赖集为$F_{min}=\{B\rightarrow G,CE\rightarrow B,C\rightarrow A,B\rightarrow D,C\rightarrow D\}$。</p>
+<p>第二步：候码非码成子集。</p>
+<p>由于候选码为$(CE)$因此将$CE\rightarrow B$划分出子集$(BCE)$，而$B\rightarrow G，B\rightarrow D$左侧均不含主属性$(C、E)$中的任何一个故划分出$(BG),(BD)$ </p>
+<p>第三步：此时剩余依赖$F=\{C\rightarrow A,C\rightarrow D\}$剩余元素$\{A,C,D\}$检查发现函数依赖左侧都是候选码即完成BCNF分解，如果不满足则继续分解余下的。 </p>
+<p>于是BCNF分解的最后结果为$\{(BG),(BD),(ACD),(BCE)\}$。</p>
+<p>法二：</p>
+<p>第一步：写出R,极其$F$，任取一项非候选键项写至左子树设为$R_1,F_1$ ,剩余写至右子树为$R_2,F_2$</p>
+<p>第二步：同理分解，最后会留候选键，分解为$R_1…R_n$</p>
+<h3 id="五、设计题-本题12分"><a href="#五、设计题-本题12分" class="headerlink" title="五、设计题(本题12分)"></a>五、设计题(本题12分)</h3><p>本大题考核学生对于给定的实际数据库系统的综合应用,要求能根据题目给定的</p>
+<h4 id="1-语义描述完成如下应用"><a href="#1-语义描述完成如下应用" class="headerlink" title="1.语义描述完成如下应用"></a>1.语义描述完成如下应用</h4><p>(1)设计该理系统的E一R图；(2)将该ER图转换为关系横型结构；(3)指出转换结果中每个关系模式的主码和外码(如果有)。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/contact/wechatpay.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/01/SummaryOf ProbabilityStatistics/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic013.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/smallPic/pic013.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                概率统计期末总结</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        notify: true, // 邮件提醒!!!
+        verify: true, // 验证码
+        appId: "CamBhb9zezGsaY1N4Xflnmol-gzGzoHsz",
+        appKey: "pwG2i33AWjwOOQnEPqLwuW62",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="cputern.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture/icon/favicon.png" itemprop="image" alt="Tern" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="cputern.top" itemprop="url" rel="author">Tern</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 CPUTern<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by GitHub&Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/icon/favicon.png">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">CPUTern</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/TernYoung" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=&site=975429539&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人链
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2690960268"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

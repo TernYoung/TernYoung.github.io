@@ -6,7 +6,7 @@ favicon: /images/favicon.png
 cdn: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1
 avatar: /icon/favicon.png
 url: www.cputern.top
-description: Shit Happens But Life Goes On
+description: 学更多的东西！
 #cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
 pjax: 1
 # 1开启
@@ -68,7 +68,7 @@ bgclass: filter-dot
 # startdash url, title, desc img
 startdash: 
   - {url: /Me/, title: 自我介绍, desc: WhoAmI, img: /smallPic/pic002.jpg}
-  - {url: /technologyStack/, title: Tern的技术栈, desc: Geek, img: /smallPic/pic004.jpg}
+  - {url: /technologyStack/, title: 个性签名, desc: Geek, img: /smallPic/pic004.jpg}
 
 
 # your site build time or founded date

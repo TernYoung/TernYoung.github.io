@@ -17,10 +17,9 @@ photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/smallPic/pic002.jp
 
 - 爱折腾，拆过各种东西，只要你想得到的，我基本都拆过，修过电脑，手机，可惜没有报废，都被我给折腾好了，装过n种系统，什么ubuntu，kali，deepin，centos等等，装装卸卸几十次应该有了，现在直接用虚拟机懒得折腾了，自己能折腾，坚决不找人。
 - 吃素，不是素食主义者，但是肉真的难吃，你觉得呢？
+- 休闲喜欢打打游戏
 - 编程，实现一个功能的感觉真的非常棒。
 - 没想到，等我想到再写上。
-
-
 
 
 ## 关于小站
@@ -29,7 +28,7 @@ photos: https://cdn.jsdelivr.net/gh/TernYoung/nicePicture@1.1/smallPic/pic002.jp
 
 少即是多 ( Less is more )，喜欢干净简洁，有用的，坚持原创。
 
-
+有想要搭建博客的可以私聊我！
 
 联系方式：cputern@foxmail.com
 
